@@ -19,6 +19,7 @@
     "url": "https://github.com/Glassig/Crackers.git"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "handlebars": "^4.0.5"
   }
 }
