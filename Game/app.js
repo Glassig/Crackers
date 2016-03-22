@@ -1,12 +1,13 @@
 var express = require('express');
+//var hbs = require('express-hbs');
 var app = express();
 
 app.set('view engine', 'hbs');
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render('index', { title: 'Saltineeeeees'});
 });
 
 app.listen(4000, function () {
-  console.log('Example app listening on port 4000!');
+  console.log('Listening on port 4000!');
 });
