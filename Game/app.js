@@ -13,7 +13,7 @@ app.get('/speech', function (req, res) {
   res.render('speech', { title: 'Speech-version'});
 });
 
-app.get('/type', function (req, res) {
+app.get('/typing', function (req, res) {
   res.render('typing', { title: 'Typing-version'});
 });
 
