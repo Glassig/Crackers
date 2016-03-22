@@ -1,0 +1,18 @@
+Name: [Crackers]
+Goal: Find and eat 3 crackers
+Scenario: Hungry bunny
+Minimal amount of commands: 20
+Maximum of possible interactions:
+Main character: Bunny
+
+Commands:
+Cracker 1: [Livingroom] See cracker close to cat, (scared of cat, lure cat away) find cat toy (description: has a noisy bell), throw cat toy (cat chases it), eat cracker. 
+Cracker 2: [bedroom] "Look under bed", find safe, look in trash, find one note with code, use code on safe, open safe, eat cracker.
+Cracker 3: [kitchen] See cracker-box on table, see chair close to table, move chair closer to table, get on chair, get on table, open box, eat cracker.
+
+
+
+Distractions:
+
+Plot:
+You are a bunny who escaped your cage, and you happen to be very hungry. You have the munchies for crackers. Find all three crackers in the [apartment] to still your hunger and to win.

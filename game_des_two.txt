@@ -1,0 +1,17 @@
+Name: [Crackers]
+Goal: Find and eat 3 crackers
+Scenario: Hungry bunny
+Minimal amount of commands:
+Maximum of possible interactions:
+Main character: Bunny
+
+Commands:
+
+Cracker 1: [cafeteria] Find coin, take coin, find vending machine, put coin in vending machine, (you get cracker) eat cracker.
+Cracker 2: [classroom] look around, see something on blackboard, read blackboard, find riddle, solve riddle, find cracker, eat cracker.
+Cracker 3: [hallway] 
+
+Distraction-commands:
+
+Plot: See game_des_one
+
