@@ -8,6 +8,9 @@ There you can also get npm, so get that. Every package downloaded with npm need 
 On mac, use command "node app.js"
 On Linux, use command "nodejs app.js" (apparently "node" is an old and bad package that comes with linux, so let's not use that).
 
+## PoS-tagger
+We got the PoS-tagger from https://www.npmjs.com/package/parts-of-speech. Documentation is available there.
+
 ## Favicon
 Right now we got one from http://www.favicon.cc/?action=icon&file_id=545707, which I basically use so I can easier find the tab. 
 If you want to create a custome favicon: (only tips) http://www.favicon-generator.org/editor/ and then replace it in the folder /public
