@@ -4,7 +4,7 @@ var app = express();
 
 app.set('view engine', 'hbs');
 app.use(express.static(__dirname+'/public'));
-app.use(favicon('favicon.ico'));
+app.use(favicon(__dirname + '/public/favicon.ico'));
 
 app.get('/', function (req, res) {
   res.render('index', { title: 'Saltiiiiiiiines', txt: 'Welcome to our game! You rule!'});
