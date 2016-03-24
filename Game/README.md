@@ -10,6 +10,7 @@ On Linux, use command "nodejs app.js" (apparently "node" is an old and bad packa
 
 ## PoS-tagger
 We got the PoS-tagger from https://www.npmjs.com/package/parts-of-speech. Documentation is available there.
+It has massive flaws. like, move and jump are nouns. so we have to figure all of those out and convert them or have special-cases.
 
 ## Favicon
 Right now we got one from http://www.favicon.cc/?action=icon&file_id=545707, which I basically use so I can easier find the tab. 
