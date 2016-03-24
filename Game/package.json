@@ -21,6 +21,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "express-hbs": "^0.8.4",
-    "hbs": "^4.0.0"
+    "hbs": "^4.0.0",
+    "serve-favicon": "^2.3.0"
   }
 }
