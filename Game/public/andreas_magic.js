@@ -1,12 +1,36 @@
+//kitchen items
+var table = new Item("table", 
+	"A tall table, and you can see a cracker laying on it! If only you could reach it...", 
+	null);
+var chair = new Item("chair", 
+	"A kitchen chair, but it isn't at the table for some reason.", 
+	"not moved");
+var crackerKitchen = new Item("cracker", 
+	"A cracker!", 
+	null);
+var refrigerator = new Item("refrigerator", 
+	"A refrigerator, shame you don't store crackers in those.", 
+	null);
+
+//livingroom items
+var cat = new Item("cat", 
+	"A scary-looking cat. It's laying right next to a cracker! Maybe you could lure it away somehow...", 
+	"guarding");
+ 
+//bedroom items
+
+
+//rooms
 var kitchen = {
 	name: "kitchen",
-	description: "waaa its a kitchen",
+	description: "waaa it's a kitchen",
+	items: [var cat = new Item()]
 	door: {
 		livingroom:null,
 		bedroom:null
 	},
 	crackelicious: function() {
-		return 1;
+
 	}
 }
 
@@ -20,7 +44,7 @@ var livingroom = {
 }
 
 var bedroom = {
-	name: "livingroom",
+	name: "bedroom",
 	description: "magic be doin' here",
 	door: {
 		kitchen:null,
