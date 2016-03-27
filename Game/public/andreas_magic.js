@@ -48,17 +48,6 @@ var validTags = [
 	"VBP",
 	"VBZ"]
 
-function changeRoom(newRoom) {
-	if(newRoom == gamestate.room.name) {
-		console.log("you are already in that room, stupid");
-	} else if(gamestate.room.door[newRoom] != null) {
-		gamestate.room = gamestate.room.door[newRoom];
-		console.log(gamestate.room.description);
-	} else {
-		console.log("the room doesn't exist.")
-	}
-}
-
 var textfield = document.querySelector(".textfield");
 
 function tiggeditag(input) {
