@@ -29,6 +29,7 @@ var bedroom = {
 }
 
 var gamestate = {
+	p_name:null,
 	room:null,
 	crackers:0,
 	commands:0

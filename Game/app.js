@@ -7,7 +7,7 @@ app.use(express.static(__dirname+'/public'));
 app.use(favicon(__dirname + '/public/pictures/favicon.png'));
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Saltiiiiiiiines', txt: 'Welcome to our game! You rule!'});
+  res.render('index', {title: 'Saltiiiiiiiines', txt: 'Welcome to our game! You rule!'});
 });
 
 app.get('/speech', function (req, res) {
