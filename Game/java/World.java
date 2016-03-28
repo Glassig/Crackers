@@ -7,11 +7,13 @@
  	String plot;
  	String instructions;
  	ArrayList<Room> rooms;
+ 	int crackerCount;
 
  	public World(String plot, String instructions){
  		this.plot = plot;
  		this.instructions = instructions;
  		this.rooms = new ArrayList<Room>();
+ 		crackerCount = 0;
  	}
 
  	/*
@@ -19,6 +21,13 @@
  	*/
  	public void addRoom(Room room){
  		rooms.add(room);
+ 	}
+
+ 	/*
+ 	* Increment cracker count (eat a cracker)
+ 	*/
+ 	public void eatCracker(){
+ 		crackerCount++;
  	}
 
 

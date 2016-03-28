@@ -7,11 +7,13 @@ Main character: Bunny
 
 Commands:
 
-Cracker 1: [cafeteria] Find coin, take coin, find vending machine, put coin in vending machine, (you get cracker) eat cracker.
-Cracker 2: [classroom] look around, see something on blackboard, read blackboard, find riddle, solve riddle, find cracker, eat cracker.
-Cracker 3: [hallway] 
+Cracker 1: [cafeteria] Find coin, take coin, find vending machine, put coin in vending machine, eat cracker.
+Cracker 2: [classroom] find backpack (locked with padlock), check desk (find key), take key, use key on backpack (find cracker), eat cracker
+Cracker 3: [corridor] see poster with math, solve math, check that locker, eat cracker.
 
-Distraction-commands:
+Possible distractions:
+//todo
 
-Plot: See game_des_one
+Plot:
+//todo
 
