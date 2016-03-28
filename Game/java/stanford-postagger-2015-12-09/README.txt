@@ -54,7 +54,7 @@ accessed via the command line. To run the demonstration GUI you should
 be able to use any of the following 2 methods:
 
 1)
-java -mx200m -classpath stanford-postagger.jar:lib/* edu.stanford.nlp.tagger.maxent.MaxentTaggerGUI models/wsj-0-18-left3words-distsim.tagger
+java -mx200m -classpath stanford-postagger.jar:lib/slf4j-api.jar:lib/slf4j-simple.jar edu.stanford.nlp.tagger.maxent.MaxentTaggerGUI models/english-left3words-distsim.tagger
 
 2) Running the appropriate script for your operating system:
     stanford-postagger-gui.bat
@@ -62,8 +62,8 @@ java -mx200m -classpath stanford-postagger.jar:lib/* edu.stanford.nlp.tagger.max
 
 To run the tagger from the command line, you can start with the provided
 script appropriate for you operating system:
-    ./stanford-postagger.sh models/wsj-0-18-left3words-distsim.tagger sample-input.txt
-    stanford-postagger models\wsj-0-18-left3words-distsim.tagger sample-input.txt
+    ./stanford-postagger.sh models/english-left3words-distsim.tagger sample-input.txt
+    stanford-postagger models\english-left3words-distsim.tagger sample-input.txt
 The output should match what is found in sample-output.txt
 
 The tagger has three modes: tagging, training, and testing.  Tagging
@@ -91,7 +91,7 @@ tagger and descriptions of those options).
 To tag a file using the pre-trained bidirectional model
 =======================================================
 
-java -mx300m -classpath stanford-postagger.jar:lib/* edu.stanford.nlp.tagger.maxent.MaxentTagger -model models/wsj-0-18-bidirectional-distsim.tagger -textFile sample-input.txt > sample-tagged.txt
+java -mx300m -classpath stanford-postagger.jar:lib/* edu.stanford.nlp.tagger.maxent.MaxentTagger -model models/english-left3words-distsim.tagger -textFile sample-input.txt > sample-tagged.txt
 
 Tagged output will be printed to standard out, which you can redirect
 as above.  Note that the bidirectional model is slightly more accurate
@@ -183,7 +183,7 @@ TaggerDemo.java
   should be able to compile and run it with:
 
   javac -cp stanford-postagger.jar TaggerDemo.java
-  java -cp ".:stanford-postagger.jar" TaggerDemo models/wsj-0-18-left3words.tagger sample-input.txt
+  java -cp ".:stanford-postagger.jar" TaggerDemo models/english-left3words.tagger sample-input.txt
 
   (If you are on Windows, you need to replace the ":" with a ";" in the
   -cp argument, and should use a "\" in place of the "/" in the filename....)

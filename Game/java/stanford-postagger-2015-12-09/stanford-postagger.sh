@@ -2,5 +2,5 @@
 #
 # usage: ./stanford-postagger.sh model textFile
 #  e.g., ./stanford-postagger.sh models/english-left3words-distsim.tagger sample-input.txt
-
+javac -cp 'stanford-postagger.jar:lib/*' edu.stanford.nlp.tagger.maxent.MaxentTagger
 java -mx300m -cp 'stanford-postagger.jar:lib/*' edu.stanford.nlp.tagger.maxent.MaxentTagger -model $1 -textFile $2
