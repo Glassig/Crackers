@@ -1,18 +1,23 @@
 /*
  * World class
  */
+ import java.util.ArrayList;
 
- public class World() {
+
+
+ public class World {
 
  	String plot;
  	String instructions;
  	ArrayList<Room> rooms;
+ 	Room currentLocation;
  	int crackerCount;
 
- 	public World(String plot, String instructions){
+ 	public World(String plot, String instructions, Room startLocation){
  		this.plot = plot;
  		this.instructions = instructions;
- 		this.rooms = new ArrayList<Room>();
+ 		rooms = new ArrayList<Room>();
+ 		currentLocation = startLocation;
  		crackerCount = 0;
  	}
 
@@ -32,7 +37,9 @@
 
 
 
- 	//getters
+ 	/*
+ 	* Getters
+ 	*/
  	public String getPlot(){
  		return plot;
  	}
@@ -43,6 +50,21 @@
 
  	public ArrayList getRooms(){
  		return rooms;
+ 	}
+
+ 	public int getCrackers(){
+ 		return crackerCount;
+ 	}
+
+ 	public String getLocation(){
+ 		return currentLocation.getName();
+ 	}
+
+ 	/*
+ 	* Setters
+ 	*/
+ 	public void setLocation(Room newLoc){
+ 		currentLocation = newLoc;
  	}
 
  }
