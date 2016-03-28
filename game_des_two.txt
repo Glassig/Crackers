@@ -15,5 +15,5 @@ Possible distractions:
 //todo
 
 Plot:
-//todo
+You are a small class pet bunny who has escaped your cage in the classroom, and you happen to be very hungry. You have the munchies for crackers. Find all three crackers in the school to still your hunger!
 
