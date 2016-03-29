@@ -1,3 +1,11 @@
 
     ./stanford-postagger.sh models/english-left3words-distsim.tagger sample-input.txt
     stanford-postagger models\english-left3words-distsim.tagger sample-input.txt
+
+
+    FIXED! TO RUN TaggerDemo DO THIS:
+    1. compile with this command:
+    javac -cp stanford-postagger.jar TaggerDemo.java
+
+    2. run with this command:
+    java -cp ".:stanford-postagger.jar:lib/*" TaggerDemo models/english-left3words-distsim.tagger sample-input.txt

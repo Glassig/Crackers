@@ -42,7 +42,7 @@ class TaggerDemo2 {
       List<TaggedWord> tSentence = tagger.tagSentence(sentence);
       pw.println(Sentence.listToString(tSentence, false));
     }
-
+ //------
     // print the adjectives in one more sentence. This shows how to get at words and tags in a tagged sentence.
     List<HasWord> sent = Sentence.toWordList("The", "slimy", "slug", "crawled", "over", "the", "long", ",", "green", "grass", ".");
     List<TaggedWord> taggedSent = tagger.tagSentence(sent);
