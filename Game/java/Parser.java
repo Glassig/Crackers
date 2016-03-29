@@ -12,7 +12,7 @@ public class Parser {
 	* Takes in a command pair (verb+noun) and parses the meaning
 	* of it.
 	*/
-	public World parse(World world, String verb, String noun){
+	public void parse(Player player, World world, String verb, String noun){
 		verb.toLowerCase();
 		noun.toLowerCase();
 
@@ -20,10 +20,10 @@ public class Parser {
             case "go":
             	for(Room room : world.getRooms()){
             		if(noun.equals(room.getName())){
-            			if(world.getLocation().equals(noun)){
+            			if(player.getCurrentRoom().getName().equals(noun)){
             				System.out.println("You are already in the "+noun+"!\n");
             			}else{
-            				world.setLocation(room);
+            				player.setCurrentRoom(room);
             				System.out.println("You are now in the "+noun+".\n");
             			}
             			break;
@@ -36,7 +36,7 @@ public class Parser {
             case "eat":
             	Item cracker = null;
             	boolean existsCracker = false;
-            	for(Item item : world.getLocation().getItems()){
+            	for(Item item : player.getCurrentRoom().getItems()){
             		if(item.getType().equals("cracker")){
             			existsCracker = true;
             			cracker = item;
@@ -44,10 +44,10 @@ public class Parser {
             		}
             	}
             	if(noun.equals("cracker") && existsCracker){
-            		world.eatCracker();
-            		world.getLocation().getItems().remove(cracker);
+            		player.eatCracker();
+            		player.getCurrentRoom().getItems().remove(cracker);
             		System.out.println("You ate the cracker!");
-            		System.out.println("You have now eaten a total of "+world.getCrackers()+" crackers.\n");
+            		System.out.println("You have now eaten a total of "+player.getCrackers()+" crackers.\n");
             	}else{
             		System.out.println("That is not possible right now.\n");
             	}
@@ -61,7 +61,5 @@ public class Parser {
             	System.out.println("I'm not sure what you are trying to do.\n");
                 break;
         }
-
-        return world;
 	}
 }

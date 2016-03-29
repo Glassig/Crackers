@@ -8,6 +8,7 @@ import java.lang.StringBuilder;
 
 public class Main {
 
+  private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
 	private static Parser parser = new Parser();
@@ -17,7 +18,7 @@ public class Main {
       int nrOfCommands = 0;
 
        	System.out.println("*~ Welcome to Crackers! ~*\n"
-       		+ "Which version do you want to play? [text/speech]");
+       		+ "Which version do you want to play? [text/speech]\n");
 
        	System.out.print("Version: ");
        	String ans = scan.nextLine();
@@ -36,15 +37,15 @@ public class Main {
        	System.out.println("INSTRUCTIONS:\n"+world.getInst()+"\n");
 
        	//this runs until you have collected all 3 crackers!
-       	while(world.getCrackers() < 3){
-       		System.out.print("@"+world.getLocation().getName()+": ");
+       	while(bunny.getCrackers() < 3){
+       		System.out.print("@"+bunny.getCurrentRoom().getName()+": ");
        		String com = scan.nextLine();
           nrOfCommands += 1;
        		if(com.equals("quit") || com.equals("exit"))
        			System.exit(0);
        		//handle user input here!
 
-       		parser.parse(world, "eat", "cracker");
+       		parser.parse(bunny, world, "", "");
        	}
 
        	//victory!
@@ -86,13 +87,15 @@ public class Main {
     	bedroom.addItem(safe);
     	bedroom.addItem(paper);
 
+      bunny = new Player(kitchen);
+
     	//Create the appartment world
     	String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
     		+"You have the munchies for crackers.\n"
     		+"Find all three crackers in the apartment to still your hunger!";
     	String instructions = "";
-
-    	world = new World(plot, instructions, kitchen);
+    	
+      world = new World(plot, instructions);
     	world.addRoom(kitchen);
     	world.addRoom(livingroom);
     	world.addRoom(bedroom);
@@ -117,8 +120,6 @@ public class Main {
     		false);
     	Item desk = new Item("desk", "A desk, maybe there's something in it...", false);
     	Item key = new Item("key", "A small key!", false);
-    	Item cracker = new Item("cracker", "", false);
-    	classroom.addItem(cracker);
     	classroom.addItem(backpack);
     	classroom.addItem(desk);
     	classroom.addItem(key);
@@ -134,13 +135,15 @@ public class Main {
     	corridor.addItem(poster);
     	corridor.addItem(locker222);
 
+      bunny = new Player(classroom);
+
     	//Create the school world
-    	String plot = "You are a small class pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n" 
+    	String plot = "You are a small sexy class pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n" 
     		+"You have the munchies for crackers.\n"
     		+"Find all three crackers in the school to still your hunger!";
     	String instructions = "";
 
-    	world = new World(plot, instructions, classroom);
+    	world = new World(plot, instructions);
     	world.addRoom(cafeteria);
     	world.addRoom(classroom);
     	world.addRoom(corridor);
