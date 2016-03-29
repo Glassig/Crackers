@@ -11,11 +11,11 @@ HashMap commands:
 public class Synonyms {
 
 	// VERBS
-	private HashMap<String, int> go;
-	private HashMap<String, int> take;
-	private HashMap<String, int> eat;
-	private HashMap<String, int> interact;
-	private HashMap<String, int> look;
+	private HashMap<String, Integer> go;
+	private HashMap<String, Integer> take;
+	private HashMap<String, Integer> interact;
+	private HashMap<String, Integer> look;
+	private HashMap<String, Integer> eat;
 
 	//NOUNS maybe?
 
@@ -32,17 +32,16 @@ value = int:
 	}
 
 	private void createLists() {
-		go = new HashMap<String, int>();
-		take = new HashMap<String, int>();
-		eat = new HashMap<String, int>();
-		interact = new HashMap<String, int>();
-		look = new HashMap<String, int>();
+		go = new HashMap<String, Integer>();
+		take = new HashMap<String, Integer>();
+		eat = new HashMap<String, Integer>();
+		interact = new HashMap<String, Integer>();
+		look = new HashMap<String, Integer>();
 		addGo();
 		addInteract();
 		addTake();
 		addEat();
 		addLook();
-
 	}
 
 	private void addGo() {
@@ -50,15 +49,6 @@ value = int:
 		go.put("walk", 1);
 		go.put("enter", 1);
 		go.put("move", 2);
-	}
-
-	private void addInteract() {
-		interact.put("use", 1);
-		interact.put("utilize", 1);
-		interact.put("interact", 1);
-		interact.put("throw", 1);
-		interact.put("push", 1);
-		interact.put("put", 1);
 	}
 
 	private void addTake() {
@@ -76,18 +66,13 @@ value = int:
 		take.put("seize", 1);
 	}
 
-	private void addEat() {
-		eat.put("eat", 1);
-		eat.put("consume", 1);
-		eat.put("munch", 1);
-		eat.put("bite", 1);
-		eat.put("chew", 1);
-		eat.put("devour", 1);
-		eat.put("feed", 1);
-		eat.put("absorb", 1);
-		eat.put("snack", 1);
-		eat.put("chow", 1);
-		eat.put("gobble", 1);
+	private void addInteract() {
+		interact.put("use", 1);
+		interact.put("utilize", 1);
+		interact.put("interact", 1);
+		interact.put("throw", 1);
+		interact.put("push", 1);
+		interact.put("put", 1);
 	}
 
 	private void addLook() {
@@ -112,6 +97,20 @@ value = int:
 		look.put("gaze", 1);
 	}
 
+	private void addEat() {
+		eat.put("eat", 1);
+		eat.put("consume", 1);
+		eat.put("munch", 1);
+		eat.put("bite", 1);
+		eat.put("chew", 1);
+		eat.put("devour", 1);
+		eat.put("feed", 1);
+		eat.put("absorb", 1);
+		eat.put("snack", 1);
+		eat.put("chow", 1);
+		eat.put("gobble", 1);
+	}
+
 	public ArrayList<String> verbTags(ArrayList<String> inputVerbs) {
 		ArrayList<String> resultVerb = new ArrayList<String>();
 		for (String verb: inputVerbs) {
@@ -134,6 +133,7 @@ value = int:
 		} else {
 			//null
 		}
+		return null;
 	}
 }
 
