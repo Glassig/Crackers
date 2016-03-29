@@ -12,6 +12,7 @@ public class Main {
 
 	public static void main(String []args) {
     	Scanner scan = new Scanner(System.in);	// Reading from System.in
+      int nrOfCommands = 0;
 
        	System.out.println("*~ Welcome to Crackers! ~*\n"
        		+ "Which version do you want to play? [text/speech]");
@@ -36,6 +37,7 @@ public class Main {
        	while(world.getCrackers() != 3){
        		System.out.print("@"+world.getLocation()+": ");
        		String com = scan.nextLine();
+          nrOfCommands += 1;
        		if(com.equals("quit") || com.equals("exit"))
        			System.exit(0);
        		//handle user input here!
@@ -43,7 +45,8 @@ public class Main {
 
        	//victory!
        	System.out.println("Victory! You are no longer hungry.\n"
-       						+"Thank you for playing! <3\n");
+       						+ "You completed the game in: " + nrOfCommands + "commands. \n"
+                  + "Thank you for playing! <3\n");
     }
 
 
