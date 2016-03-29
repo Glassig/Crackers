@@ -48,7 +48,7 @@
  		return instructions;
  	}
 
- 	public ArrayList getRooms(){
+ 	public ArrayList<Room> getRooms(){
  		return rooms;
  	}
 
@@ -56,8 +56,8 @@
  		return crackerCount;
  	}
 
- 	public String getLocation(){
- 		return currentLocation.getName();
+ 	public Room getLocation(){
+ 		return currentLocation;
  	}
 
  	/*

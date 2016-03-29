@@ -9,10 +9,10 @@ import java.lang.StringBuilder;
 public class Main {
 
 	private static World world;
+	private static Scanner scan = new Scanner(System.in);
+	private static Parser parser = new Parser();
 
 	public static void main(String []args) {
-    	Scanner scan = new Scanner(System.in);	// Reading from System.in
-
        	System.out.println("*~ Welcome to Crackers! ~*\n"
        		+ "Which version do you want to play? [text/speech]");
 
@@ -33,12 +33,14 @@ public class Main {
        	System.out.println("INSTRUCTIONS:\n"+world.getInst()+"\n");
 
        	//this runs until you have collected all 3 crackers!
-       	while(world.getCrackers() != 3){
-       		System.out.print("@"+world.getLocation()+": ");
+       	while(world.getCrackers() < 3){
+       		System.out.print("@"+world.getLocation().getName()+": ");
        		String com = scan.nextLine();
        		if(com.equals("quit") || com.equals("exit"))
        			System.exit(0);
        		//handle user input here!
+
+       		parser.parse(world, "eat", "cracker");
        	}
 
        	//victory!
@@ -58,20 +60,16 @@ public class Main {
     		"A tall table, but you see a cracker laying on the edge of it! Too bad it's too high up for you to reach...",
     		false);
     	Item chair = new Item("chair", "", false);
-    	Item kitchenCracker = new Item("cracker", "It's a cracker!!", false);
     	kitchen.addItem(table);
     	kitchen.addItem(chair);
-    	kitchen.addItem(kitchenCracker);
     	//livingroom
     	Room livingroom = new Room("livingroom", "It's a livingroom! You somehow feel more comfy.");
     	Item cat = new Item("cat",
     		"A cat is laying on the floor, right next to a cracker! Looks like it's guarding it...",
     		false);
     	Item toy = new Item("toy mouse", "A toy mouse!", false);
-    	Item livingroomCracker = new Item("cracker", "It's a cracker!!", false);
     	livingroom.addItem(cat);
     	livingroom.addItem(toy);
-    	livingroom.addItem(livingroomCracker);
     	//bedroom
     	Room bedroom = new Room("bedroom", "It's a bedroom! Looking at the bed makes you sleepy.");
     	Item bed = new Item("bed", "A king sized bed. There seems to be something under it.", false);
@@ -79,11 +77,9 @@ public class Main {
     	Item paper = new Item("piece of a paper", 
     		"A piece of a paper, and there's a code on it: 4257.", 
     		false);
-    	Item bedroomCracker = new Item("cracker", "It's a cracker!!", false);
     	bedroom.addItem(bed);
     	bedroom.addItem(safe);
     	bedroom.addItem(paper);
-    	bedroom.addItem(bedroomCracker);
 
     	//Create the appartment world
     	String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
@@ -116,6 +112,8 @@ public class Main {
     		false);
     	Item desk = new Item("desk", "A desk, maybe there's something in it...", false);
     	Item key = new Item("key", "A small key!", false);
+    	Item cracker = new Item("cracker", "", false);
+    	classroom.addItem(cracker);
     	classroom.addItem(backpack);
     	classroom.addItem(desk);
     	classroom.addItem(key);

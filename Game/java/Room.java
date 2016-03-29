@@ -45,7 +45,7 @@ public class Room {
     	return description;
     }
 
-    public ArrayList getItems(){
+    public ArrayList<Item> getItems(){
     	return items;
     }
 
