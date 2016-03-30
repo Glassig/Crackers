@@ -11,12 +11,10 @@ public class Main {
   private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
-  private static POSTagger tagger = new POSTagger();
+  private static POSTagger tagger = new POSTagger("models/english-left3words-distsim.tagger");
 	private static Parser parser = new Parser();
 
 	public static void main(String []args) {
-
-      int nrOfCommands = 0;
 
        	System.out.println("\n*~ Welcome to Crackers! ~*\n"
        		+ "Which version do you want to play? [text/speech]\n");
@@ -41,17 +39,22 @@ public class Main {
        	while(bunny.getCrackers() < 3){
        		System.out.print("@"+bunny.getCurrentRoom().getName()+": ");
        		String com = scan.nextLine();
-          nrOfCommands += 1;
+          bunny.updateCommandCount();
        		if(com.equals("quit") || com.equals("exit"))
        			System.exit(0);
-       		//handle user input here!
+          else if(com.equals("help"))
+            System.out.println(world.getInst()+"\n");
 
-       		parser.parse(bunny, world, "", "");
+       		//handle user input here!
+          String[] comWords = com.split("[\\W]");
+
+          tagger.postag(comWords);
+
        	}
 
        	//victory!
        	System.out.println("Victory! You are no longer hungry.\n"
-       						+ "You completed the game in: " + nrOfCommands + "commands. \n"
+       						+ "You completed the game in: " + bunny.getCommandCount() + "commands. \n"
                   + "Thank you for playing! <3\n");
     }
 

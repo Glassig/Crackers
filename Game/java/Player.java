@@ -8,11 +8,13 @@ import java.util.ArrayList;
 public class Player {
 	Room currentRoom;
 	int crackerCount;
+	int commandCount;
 	ArrayList<Item> inventory;
 
 	public Player(Room startRoom){
 		currentRoom = startRoom;
 		crackerCount = 0;
+		commandCount = 0;
 		inventory = new ArrayList<Item>();
 	}
 
@@ -22,6 +24,13 @@ public class Player {
  	*/
  	public void eatCracker(){
  		crackerCount++;
+ 	}
+
+ 	/*
+ 	* Increment command counter with 1
+ 	*/
+ 	public void updateCommandCount(){
+ 		commandCount++;
  	}
 
 
@@ -35,6 +44,10 @@ public class Player {
 
  	public Room getCurrentRoom(){
  		return currentRoom;
+ 	}
+
+ 	public int getCommandCount(){
+ 		return commandCount;
  	}
 
 	/*
