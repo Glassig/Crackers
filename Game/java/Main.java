@@ -11,13 +11,14 @@ public class Main {
   private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
+  private static POSTagger tagger = new POSTagger();
 	private static Parser parser = new Parser();
 
 	public static void main(String []args) {
 
       int nrOfCommands = 0;
 
-       	System.out.println("*~ Welcome to Crackers! ~*\n"
+       	System.out.println("\n*~ Welcome to Crackers! ~*\n"
        		+ "Which version do you want to play? [text/speech]\n");
 
        	System.out.print("Version: ");
