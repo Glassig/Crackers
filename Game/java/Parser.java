@@ -58,7 +58,7 @@ public class Parser {
             case "interact":
             	break;
             default:
-            	System.out.println("I'm not sure what you are trying to do.\n");
+            	//System.out.println("I'm not sure what you are trying to do.\n");
                 break;
         }
 	}

@@ -3,7 +3,10 @@
  */
 
 import java.util.Scanner;
+import java.util.List;
 import java.lang.StringBuilder;
+
+import edu.stanford.nlp.ling.TaggedWord;
 
 
 public class Main {
@@ -47,8 +50,20 @@ public class Main {
 
        		//handle user input here!
           String[] comWords = com.split("[\\W]");
+          List<TaggedWord> comTagged = tagger.postag(comWords); //ONLY VB AND NN INCLUDED
 
-          tagger.postag(comWords);
+          boolean foundVerb = false;
+          TaggedWord vb = null;
+          for(TaggedWord tw : comTagged){
+            if(tw.tag().startsWith("VB")){
+              foundVerb = true;
+              vb = tw;
+            }
+            else if(tw.tag().startsWith("NN") && foundVerb){
+              parser.parse(bunny, world, vb.word(), tw.word());
+              foundVerb = false;
+            }
+          }
 
        	}
 
