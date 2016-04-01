@@ -13,7 +13,7 @@ public class Synonyms {
 	// VERBS
 	private HashMap<String, Integer> go;
 	private HashMap<String, Integer> take;
-	private HashMap<String, Integer> interact;
+	private HashMap<String, Integer> use;
 	private HashMap<String, Integer> look;
 	private HashMap<String, Integer> eat;
 
@@ -28,17 +28,16 @@ public class Synonyms {
 	*/
 	public Synonyms() {
 		createLists();
-
 	}
 
 	private void createLists() {
 		go = new HashMap<String, Integer>();
 		take = new HashMap<String, Integer>();
 		eat = new HashMap<String, Integer>();
-		interact = new HashMap<String, Integer>();
+		use = new HashMap<String, Integer>();
 		look = new HashMap<String, Integer>();
 		addGo();
-		addInteract();
+		addUse();
 		addTake();
 		addEat();
 		addLook();
@@ -47,7 +46,10 @@ public class Synonyms {
 	private void addGo() {
 		go.put("enter", 1);
 		go.put("go", 1);
-		go.put("move", 2);
+		go.put("jump", 1);
+		go.put("move", 1);
+		go.put("run", 1);
+		go.put("visit", 1);
 		go.put("walk", 1);
 	}
 
@@ -66,13 +68,20 @@ public class Synonyms {
 		take.put("take", 1);
 	}
 
-	private void addInteract() {
-		interact.put("interact", 1);
-		interact.put("push", 1);
-		interact.put("put", 1);
-		interact.put("throw", 1);
-		interact.put("use", 1);
-		interact.put("utilize", 1);
+	private void addEat() {
+		eat.put("absorb", 1);
+		eat.put("bite", 1);
+		eat.put("chew", 1);
+		eat.put("chow", 1);
+		eat.put("consume", 1);
+		eat.put("devour", 1);
+		eat.put("eat", 1);
+		eat.put("feed", 1);
+		eat.put("gobble", 1);
+		eat.put("ingest", 1);
+		eat.put("munch", 1);
+		eat.put("snack", 1);
+		eat.put("swallow", 1);
 	}
 
 	private void addLook() {
@@ -98,19 +107,16 @@ public class Synonyms {
 		look.put("watch", 1);
 	}
 
-	private void addEat() {
-		eat.put("absorb", 1);
-		eat.put("bite", 1);
-		eat.put("chew", 1);
-		eat.put("chow", 1);
-		eat.put("consume", 1);
-		eat.put("devour", 1);
-		eat.put("eat", 1);
-		eat.put("feed", 1);
-		eat.put("gobble", 1);
-		eat.put("munch", 1);
-		eat.put("snack", 1);
+	private void addUse() {
+		use.put("apply", 1);
+		use.put("insert", 1);
+		use.put("practice", 1);
+		use.put("throw", 1);
+		use.put("unlock", 1);
+		use.put("use", 1);
+		use.put("utilize", 1);
 	}
+
 
 	public ArrayList<String> verbTags(ArrayList<String> inputVerbs) {
 		ArrayList<String> resultVerb = new ArrayList<String>();
@@ -123,16 +129,14 @@ public class Synonyms {
 	public String verbs(String vb) {
 		if(go.containsKey(vb)) {
 			return "go";
-		} else if(interact.containsKey(vb)) {
-			return "interact";
+		} else if(use.containsKey(vb)) {
+			return "use";
 		} else if(take.containsKey(vb)) {
 			return "take";
 		} else if(look.containsKey(vb)) {
 			return "look";
 		} else if(eat.containsKey(vb)) {
 			return "eat";
-		} else {
-			//null
 		}
 		return null;
 	}
