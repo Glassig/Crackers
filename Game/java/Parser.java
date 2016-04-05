@@ -77,7 +77,7 @@ public class Parser {
 
             case "eat":
             	for(Item item : player.getCurrentRoom().getItems()){
-            		if(item.getType().equals("eat") && item.getName().equals(noun)){
+            		if(item.getType().equals("eat") && item.getName().equals(noun) && item.getStatus()){
             			player.eatCracker();
                         player.getCurrentRoom().getItems().remove(item);
                         System.out.println("You ate the "+noun+".");
@@ -105,6 +105,8 @@ public class Parser {
             		if(item.getName().equals(noun)){
                         for(Item dep : item.getViewDependables()){
                             dep.setViewable(true);
+                            if(item.getName().equals("locker222") && dep.getName().equals("cracker"))
+                                dep.setStatus(true);
                         }
                         if(item.getStatus()){
                             System.out.println(item.getDescriptionTrue()+"\n");

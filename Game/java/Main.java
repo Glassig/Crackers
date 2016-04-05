@@ -267,7 +267,8 @@ public class Main {
     		false, false);
     	Item poster = new Item("poster", 
     		"",
-    		"A poster with some text: \"If you solve this you will be lucky!\n" 
+    		"A poster with some text:\n"
+        +"\"If you solve this you will be lucky!\n" 
     		+"Maiya has 378 melons.\n"
     		+"She makes milkshakes for 78 people.\n"
     		+"She uses 2 melons for each milkshake.\n"

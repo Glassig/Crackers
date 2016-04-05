@@ -99,6 +99,7 @@ public class Synonyms {
 		look.put("peer", 1);
 		look.put("read", 1);
 		look.put("scan", 1);
+		look.put("search", 1);
 		look.put("see", 1);
 		look.put("stare", 1);
 		look.put("study", 1);
