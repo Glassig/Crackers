@@ -2,16 +2,45 @@
  * Item class
  */
 
+import java.util.ArrayList;
+
+
+
 public class Item {
 
-	private String type;
-	private String description;
-	private boolean status;
+    private String name;                    //e.g. key, ball, apple
+	private String type;                    //e.g. move, eat, go
+	private String descriptionTrue;         //when status is true
+    private String descriptionFalse;        //when status is false
+	private boolean status;                 //decides if it's accessable yet
+    //private boolean viewable;               //if it's listed when you look around the room
+    private ArrayList<Item> dependables;    //items that depend on this item's status
+    private ArrayList<Item> usables;        //items you can use this item on
+    //private ArrayList<Item> viewDependables;//items you can only discover by first looking at this item
+    
 
-	public Item(String type, String description, boolean status){
+	public Item(String name, String type, String descriptionTrue, String descriptionFalse, boolean status){
+        this.name = name;
     	this.type = type;
-    	this.description = description;
+    	this.descriptionTrue = descriptionTrue;
+        this.descriptionFalse = descriptionFalse;
     	this.status = status;
+        dependables = new ArrayList<Item>();
+        usables = new ArrayList<Item>();
+    }
+
+    /*
+    * Add a dependable item.
+    */
+    public void addDependable(Item item){
+        dependables.add(item);
+    }
+
+    /*
+    * Add a usable item.
+    */
+    public void addUsable(Item item){
+        usables.add(item);
     }
 
 
@@ -19,23 +48,39 @@ public class Item {
     /*
     * Getters
     */
+    public String getName(){
+        return name;
+    }
+
     public String getType(){
     	return type;
     }
 
-    public String getDesc(){
-    	return description;
+    public String getDescriptionTrue(){
+    	return descriptionTrue;
+    }
+
+    public String getDescriptionFalse(){
+        return descriptionFalse;
     }
 
     public boolean getStatus(){
-    	return status;
+        return status;
+    }
+
+    public ArrayList<Item> getDependables(){
+        return dependables;
+    }
+
+    public ArrayList<Item> getUsables(){
+        return usables;
     }
 
     /*
     * Setters
     */
-    public void setDescription(String newDesc){
-    	description = newDesc;
+    public void setType(String newType){
+        type = newType;
     }
 
     public void setStatus(boolean newStatus){

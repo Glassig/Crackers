@@ -10,7 +10,6 @@ public class Room {
 	private String name;
 	private String description;
 	private ArrayList<Item> items;
-	//how to door?
 
     public Room(String name, String description){
     	this.name = name;

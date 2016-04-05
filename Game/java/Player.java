@@ -33,6 +33,20 @@ public class Player {
  		commandCount++;
  	}
 
+ 	/*
+ 	* Add item to inventory
+ 	*/
+ 	public void addItemToInv(Item item){
+ 		inventory.add(item);
+ 	}
+
+ 	/*
+ 	* Remove item from inventory
+ 	*/
+ 	public void removeItemFromInv(Item item){
+ 		inventory.remove(item);
+ 	}
+
 
 
  	/*
@@ -48,6 +62,10 @@ public class Player {
 
  	public int getCommandCount(){
  		return commandCount;
+ 	}
+
+ 	public ArrayList<Item> getInventory(){
+ 		return inventory;
  	}
 
 	/*

@@ -31,15 +31,17 @@ public class POSTagger {
     tagger = new MaxentTagger(taggerModel);
   }
 
-  public void postag(String[] comWords){
-    ArrayList<String> words = new ArrayList<String>();
+  public List<TaggedWord> postag(String[] comWords){
+    List<TaggedWord> result = new ArrayList<TaggedWord>();
 
     List<HasWord> sent = Sentence.toWordList(comWords);
     List<TaggedWord> taggedSent = tagger.tagSentence(sent);
     for(TaggedWord tw : taggedSent){
       if(tw.tag().startsWith("VB") || tw.tag().startsWith("NN")){
-        System.out.println(tw.word());
+        result.add(tw);
       }
     }
+    return result;
   }
+
 }
