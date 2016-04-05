@@ -17,11 +17,14 @@ public class Parser {
 		noun.toLowerCase();
 
 		switch (verb) {
-            case "go":	//FIXA
+            case "go":
+                //checks if noun is a room etc
+                boolean isRoom = false;
             	for(Room room : world.getRooms()){
             		if(noun.equals(room.getName())){
+                        isRoom = true;
             			if(player.getCurrentRoom().getName().equals(noun)){
-            				System.out.println("You are already in the "+noun+"!\n");
+                            System.out.println("You are already in the "+noun+"!\n");
             			}else{
             				player.setCurrentRoom(room);
             				System.out.println(room.getDesc()+"\n");
@@ -29,7 +32,22 @@ public class Parser {
             			break;
             		}
             	}
-            	break;
+                //if noun was a room, we break here
+                if(isRoom){
+                    break;
+                }
+                //if noun was not a room, check if item etc
+                for(Item item : player.getCurrentRoom().getItems()){
+                    if(noun.equals(item.getName()) && item.getType().equals("go")){
+                        System.out.println("You are now on the "+noun+".\n");
+                        for(Item dep : item.getDependables()){
+                            dep.setStatus(true);
+                        }
+                        break;
+                    }
+                }
+                break;
+
             case "take":
             	//if status = true:
             		//ändra type till use
@@ -52,52 +70,52 @@ public class Parser {
             			break;
             		}
             	}
-            	if(!found)
+            	if(!found){
             		System.out.println("There is no "+noun+" in this room.\n");
+                }
             	break;
 
-            case "eat":	//FIXA
-            	Item cracker = null;
-            	boolean existsCracker = false;
+            case "eat":
             	for(Item item : player.getCurrentRoom().getItems()){
-            		if(item.getType().equals("cracker")){
-            			existsCracker = true;
-            			cracker = item;
-            			break;
+            		if(item.getType().equals("eat") && item.getName().equals(noun)){
+            			player.eatCracker();
+                        player.getCurrentRoom().getItems().remove(item);
+                        System.out.println("You ate the "+noun+".");
+                        if(item.getName().equals("cracker"))
+                            System.out.println("You have eaten "+player.getCrackers()+" crackers so far.");
+                        System.out.println("");
+                        break;
             		}
-            	}
-            	if(noun.equals("cracker") && existsCracker){
-            		player.eatCracker();
-            		player.getCurrentRoom().getItems().remove(cracker);
-            		System.out.println("You ate the cracker!");
-            		System.out.println("You have now eaten a total of "+player.getCrackers()+" crackers.\n");
-            	}else{
-            		System.out.println("That is not possible right now.\n");
             	}
             	break;
 
             case "look":
-            	//if Room: print items in the room
-            	//if Item: check if in room
-            		//print description based on status
-            	if(player.getCurrentRoom().getName().equals(noun)){
+            	//if noun is the current room then list the viewable items
+            	if(player.getCurrentRoom().getName().equals(noun) || noun.equals("room")){
             		System.out.println("You look around the room and see:");
             		for (Item item : player.getCurrentRoom().getItems()) {
-            			System.out.println(item.getName());
+                        if(item.getViewable())
+                            System.out.println(item.getName());
             		}
             		System.out.println("");
             		break;
             	}
+                //if noun is an item in the current room, print it's description
             	for (Item item : player.getCurrentRoom().getItems()) {
-            		if(item.getName().equals(noun) && item.getStatus()){
-            			System.out.println(item.getDescriptionTrue()+"\n");
+            		if(item.getName().equals(noun)){
+                        for(Item dep : item.getViewDependables()){
+                            dep.setViewable(true);
+                        }
+                        if(item.getStatus()){
+                            System.out.println(item.getDescriptionTrue()+"\n");
+                        }else{
+                            System.out.println(item.getDescriptionFalse()+"\n");
+                        }
             			break;
-            		}else if(item.getName().equals(noun) && !item.getStatus()){
-            			System.out.println(item.getDescriptionFalse()+"\n");
-            			break;
-            		}
-            	}
+            	   }
+                }
             	break;
+
             case "use":
             	//kolla om finns i inv
             	//kolla om noun finns i usables och i currentRoom
@@ -106,6 +124,7 @@ public class Parser {
             		//ändra noun dependables status till true
             		//remove noun från usables
             	//om usables empty: remove from inv
+
             	break;
             default:
             	System.out.println("Try something else.\n");

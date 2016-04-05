@@ -98,17 +98,17 @@ public class Main {
     		"eat", 
     		"There's a cracker laying on the table, what are you waiting for?!",
     		"There's a cracker laying on the table, but it's too high up to reach...",
-    		 false);
+    		 false, false);
     	Item table = new Item("table",
     		"go", 
     		"A tall table.",
     		"A table too tall to jump up onto from the floor...",
-    		false);
+    		false, true);
     	Item box = new Item("box", 
     		"go", 
     		"A box standing next to the table, just small enough for you to jump up onto.", 
     		"",
-    		true);
+    		true, true);
     	box.addDependable(table);
     	table.addDependable(kitchenCracker);
     	kitchen.addItem(kitchenCracker);
@@ -120,17 +120,17 @@ public class Main {
     		"eat", 
     		"There's a cracker laying on the floor!",
     		"There's a cracker laying on the floor right next to the cat. If only you could fet rid of that cat...",
-    		false);
+    		false, true);
     	Item cat = new Item("cat",
     		"",
     		"The cat is gone!",
     		"A scary looking cat is laying on the floor. Better stay away.",
-    		false);
+    		false, true);
     	Item toy = new Item("toy",
     	 	"take", 
     	 	"A toy mouse!", 
     	 	"",
-    	 	true);
+    	 	true, true);
     	toy.addUsable(cat);
     	cat.addDependable(livingroomCracker);
     	livingroom.addItem(livingroomCracker);
@@ -141,25 +141,27 @@ public class Main {
     	Item bedroomCracker = new Item("cracker",
     		"eat",
     		"There's a cracker laying in the safe!!",
-    		"There's a cracker somewhere in here...",
-    		false);
+    		"There's a cracker somewhere in this room...",
+    		false, false);
     	Item trash = new Item("trash", 
     		"", 
     		"A trash can, it's almost empty except for a small piece of paper.",
     		"", 
-    		true);
+    		true, true);
     	Item safe = new Item("safe", 
     		"", 
     		"The safe is open, and there's a cracker in it!",
     		"A safe, but it's locked. If only you knew the code.", 
-    		false);
+    		false, true);
     	Item paper = new Item("paper",
     		"take",
     		"A paper with some kind of code on it. I wonder what it's for...",
     		"", 
-    		true);
+    		true, false);
     	paper.addUsable(safe);
     	safe.addDependable(bedroomCracker);
+      safe.addViewDependable(bedroomCracker);
+      trash.addViewDependable(paper);
     	bedroom.addItem(bedroomCracker);
     	bedroom.addItem(trash);
     	bedroom.addItem(safe);
@@ -189,57 +191,60 @@ public class Main {
     		"eat",
     		"The cracker dropped down in the vending machine!",
     		"There's a cracker for sale in the vending machine.",
-    		false);
+    		false, false);
     	Item coin = new Item("coin",
     		"take", 
     		"A shiny coin!",
     		"",
-    		true);
-    	Item vendingMachine = new Item("vending machine", 
+    		true, true);
+    	Item machine = new Item("machine", 
     		"",
     		"You bought the cracker!",
     		"A vending machine, there is a single cracker left for sale! If only you had some money.", 
-    		false);
-    	coin.addUsable(vendingMachine);
-    	vendingMachine.addDependable(cafeteriaCracker);
+    		false, true);
+    	coin.addUsable(machine);
+    	machine.addDependable(cafeteriaCracker);
+      machine.addViewDependable(cafeteriaCracker);
     	cafeteria.addItem(cafeteriaCracker);
     	cafeteria.addItem(coin);
-    	cafeteria.addItem(vendingMachine);
+    	cafeteria.addItem(machine);
     	//CLASSROOM
     	Room classroom = new Room("classroom", "It's a classroom! You feel a little smarter.");
     	Item classroomCracker = new Item("cracker",
     		"eat",
     		"There's a cracker in the backpack!",
-    		"There's a cracker in here somwhere...",
-    		false);
+    		"There's a cracker somewhere in this room...",
+    		false, false);
     	Item backpack = new Item("backpack", 
     		"",
     		"An open backpack.",
     		"A backpack is standing next to a desk. It's locked with a padlock.", 
-    		false);
+    		false, true);
     	Item desk = new Item("desk", 
     		"",
     		"A desk, looking closer you see a key laying on it.",
     		"", 
-    		true);
+    		true, true);
     	Item key = new Item("key", 
     		"take",
     		"A small key!", 
     		"",
-    		true);
+    		true, false);
     	key.addUsable(backpack);
     	backpack.addDependable(classroomCracker);
+      backpack.addViewDependable(classroomCracker);
+      desk.addViewDependable(key);
     	classroom.addItem(classroomCracker);
     	classroom.addItem(backpack);
     	classroom.addItem(desk);
     	classroom.addItem(key);
     	//CORRIDOR
-    	Room corridor = new Room("corridor", "It's a long corridor filled with lockers numbered between 001-999");
+    	Room corridor = new Room("corridor", "It's a long corridor filled with lockers numbered locker001-locker999");
     	Item corridorCracker = new Item("cracker",
     		"eat",
     		"There's a cracker in locker 222!",
-    		"There's a cracker somewhere in here...",
-    		false);
+    		"There's a cracker somewhere in this room...",
+    		false, false);
     	Item poster = new Item("poster", 
     		"",
     		"A poster with some text: \"If you solve this you will be lucky!\n" 
@@ -248,17 +253,24 @@ public class Main {
     		+"She uses 2 melons for each milkshake.\n"
     		+"How many melons does she have left?\"", 
     		"",
-    		true);
-    	Item locker = new Item("locker", 
+    		true, true);
+    	Item locker222 = new Item("locker222", 
     		"",
     		"This locker has a cracker in it!",
-    		"An empty locker.",
-    		false);
-    	poster.addDependable(locker);
-    	locker.addDependable(corridorCracker);
+    		"",
+    		true, false);
+      Item anyLocker = new Item("lockers",
+        "",
+        "An empty locker.",
+        "",
+        true, true);
+    	locker222.addDependable(corridorCracker);
+      locker222.addViewDependable(corridorCracker);
+      poster.addViewDependable(locker222);
     	corridor.addItem(corridorCracker);
     	corridor.addItem(poster);
-    	corridor.addItem(locker);
+    	corridor.addItem(locker222);
+      corridor.addItem(anyLocker);
 
       bunny = new Player(classroom);
 
