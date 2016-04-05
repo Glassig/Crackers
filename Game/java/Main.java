@@ -11,6 +11,15 @@ import edu.stanford.nlp.ling.TaggedWord;
 
 public class Main {
 
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
   	private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
@@ -19,6 +28,17 @@ public class Main {
 	private static Parser parser = new Parser();
 
 	public static void main(String []args) {
+
+        /* Here's a color-sample for colors in terminal.*/
+        System.out.println("Color test: " 
+            + ANSI_RED + "     red"
+            + ANSI_GREEN + "     green"
+            + ANSI_YELLOW + "     yellow"
+            + ANSI_BLUE + "     blue"
+            + ANSI_PURPLE + "     purple"
+            + ANSI_CYAN + "     cyan"
+            + ANSI_WHITE + "     white"
+            + ANSI_RESET);
 
        	System.out.println("\n*~ Welcome to Crackers! ~*\n"
        		+ "Which version do you want to play? [text/speech]\n");
@@ -37,11 +57,11 @@ public class Main {
        	}
 
        	System.out.println("\nPLOT:\n"+world.getPlot()+"\n");
-       	System.out.println("INSTRUCTIONS:\n"+world.getInst()+"\n");
+       	System.out.println(ANSI_CYAN + "INSTRUCTIONS:\n"+world.getInst()+"\n" + ANSI_RESET);
 
        	//This runs until you have collected all 3 crackers!
        	while(bunny.getCrackers() < 3){
-       		System.out.print("@"+bunny.getCurrentRoom().getName()+": ");
+       		System.out.print(ANSI_BLUE + "@" + ANSI_PURPLE +bunny.getCurrentRoom().getName()+": " + ANSI_RESET);
        		String com = scan.nextLine();
           	bunny.updateCommandCount();
        		if(com.contains("quit") || com.contains("exit"))
@@ -55,7 +75,7 @@ public class Main {
             	for (Item item : bunny.getInventory()) {
             		System.out.println(item.getName());
             	}
-            	System.out.println("");
+            	//System.out.println("");
             }
 
        		//handle user input here!
