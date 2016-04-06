@@ -65,6 +65,13 @@ public class Item {
     	return type;
     }
 
+    public String getDescription(boolean status){
+        if(status){
+            return descriptionTrue;
+        }
+        return descriptionFalse;
+    }
+
     public String getDescriptionTrue(){
     	return descriptionTrue;
     }

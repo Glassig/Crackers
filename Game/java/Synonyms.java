@@ -46,6 +46,7 @@ public class Synonyms {
 	private void addGo() {
 		go.put("enter", 1);
 		go.put("go", 1);
+		go.put("head", 1);
 		go.put("jump", 1);
 		go.put("move", 1);
 		go.put("run", 1);
@@ -65,6 +66,7 @@ public class Synonyms {
 		take.put("pick", 1);
 		take.put("seize", 1);
 		take.put("snag", 1);
+		take.put("steal", 1);
 		take.put("take", 1);
 	}
 

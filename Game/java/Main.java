@@ -11,20 +11,20 @@ import edu.stanford.nlp.ling.TaggedWord;
 
 public class Main {
 
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+  public static final String ANSI_RESET = "\u001B[0m";
+  public static final String ANSI_RED = "\u001B[31m";
+  public static final String ANSI_GREEN = "\u001B[32m";
+  public static final String ANSI_YELLOW = "\u001B[33m";
+  public static final String ANSI_BLUE = "\u001B[34m";
+  public static final String ANSI_PURPLE = "\u001B[35m";
+  public static final String ANSI_CYAN = "\u001B[36m";
+  public static final String ANSI_WHITE = "\u001B[37m";
 
-  	private static Player bunny;
+  private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
-  	private static POSTagger tagger = new POSTagger("models/english-left3words-distsim.tagger");
-  	private static Synonyms synonyms = new Synonyms();
+  private static POSTagger tagger = new POSTagger("models/english-left3words-distsim.tagger");
+  private static Synonyms synonyms = new Synonyms();
 	private static Parser parser = new Parser();
 
 	public static void main(String []args) {
@@ -56,36 +56,55 @@ public class Main {
        		System.exit(0);
        	}
 
-       	System.out.println("\nPLOT:\n"+world.getPlot()+"\n");
+       	System.out.println("\n"+ANSI_CYAN+"PLOT"+ANSI_RESET+":\n"+world.getPlot()+"\n");
        	System.out.println(ANSI_CYAN + "INSTRUCTIONS:\n"+world.getInst()+"\n" + ANSI_RESET);
 
        	//This runs until you have collected all 3 crackers!
        	while(bunny.getCrackers() < 3){
        		System.out.print(ANSI_BLUE + "@" + ANSI_PURPLE +bunny.getCurrentRoom().getName()+": " + ANSI_RESET);
        		String com = scan.nextLine();
-          	bunny.updateCommandCount();
-       		if(com.contains("quit") || com.contains("exit"))
+          com = com.toLowerCase();
+          bunny.updateCommandCount();
+
+       		if(com.contains("quit") || com.contains("exit")){
        			System.exit(0);
-          	else if(com.contains("help"))
-            	System.out.println(world.getInst()+"\n");
-            else if(com.contains("items") || com.contains("inventory")){
-            	System.out.println("Your inventory contains:");
-            	if(bunny.getInventory().isEmpty())
-            		System.out.println("nothing at all.");
-            	for (Item item : bunny.getInventory()) {
-            		System.out.println(item.getName());
-            	}
-            	//System.out.println("");
+            continue;
+          }
+          else if(com.contains("help")){
+            System.out.println(world.getInst()+"\n");
+            continue;
+          }
+          else if(com.contains("items") || com.contains("inventory")){
+            System.out.println("Your inventory contains:");
+            if(bunny.getInventory().isEmpty()){
+            	System.out.println("nothing at all.");
+            }else{
+              for (Item item : bunny.getInventory()) {
+                System.out.println(item.getName());
+              }
             }
+            System.out.println(""); //needed for newline
+            continue;
+          }
+          else if(com.equals("look around")){
+            System.out.println("You look around the room and see:");
+            for (Item item : bunny.getCurrentRoom().getItems()) {
+              if(item.getViewable()){
+                System.out.println(item.getName());
+              }
+            }
+            System.out.println("");
+            continue;
+          }
 
        		//handle user input here!
-          	String[] comWords = com.split("[\\W]");
-          	List<TaggedWord> comTagged = tagger.postag(comWords); //ONLY VB AND NN INCLUDED
+          String[] comWords = com.split("[\\W]");
+          List<TaggedWord> comTagged = tagger.postag(comWords); //ONLY VB AND NN INCLUDED
 
-          	boolean foundValidVerb = false;
-          	String vb = null;
-          	for(TaggedWord tw : comTagged){
-            	if(tw.tag().startsWith("VB")){
+          boolean foundValidVerb = false;
+          String vb = null;
+          for(TaggedWord tw : comTagged){
+           	if(tw.tag().startsWith("VB")){
             		String synVb = synonyms.verbs(tw.word());
             		if(synVb != null){
               			foundValidVerb = true;
@@ -118,7 +137,7 @@ public class Main {
     		"eat", 
     		"There's a cracker laying on the table, what are you waiting for?!",
     		"There's a cracker laying on the table, but it's too high up to reach...",
-    		 false, false);
+    		 false, true);
     	Item table = new Item("table",
     		"go", 
     		"A tall table.",
@@ -163,31 +182,31 @@ public class Main {
     		"There's a cracker laying in the safe!!",
     		"There's a cracker somewhere in this room...",
     		false, false);
-    	Item trash = new Item("trash", 
+    	Item trash = new Item("trashcan", 
     		"", 
-    		"A trash can, it's almost empty except for a small piece of paper.",
+    		"A trash can, it's almost empty except for a small paper.",
     		"", 
     		true, true);
-    	Item safe = new Item("safe", 
+    	Item vault = new Item("vault", 
     		"", 
-    		"The safe is open, and there's a cracker in it!",
-    		"A safe, but it's locked. If only you knew the code.", 
+    		"The vault is open, and there's a cracker in it!",
+    		"A vault, but it's locked with a 4-digit code.", 
     		false, true);
     	Item paper = new Item("paper",
-    		"take",
-    		"A paper with some kind of code on it. I wonder what it's for...",
+    		"",
+    		"A paper with the number 1475 written on it.",
     		"", 
     		true, false);
-    	paper.addUsable(safe);
-    	safe.addDependable(bedroomCracker);
-      safe.addViewDependable(bedroomCracker);
+    	//paper.addUsable(vault);
+    	vault.addDependable(bedroomCracker);
+      vault.addViewDependable(bedroomCracker);
       trash.addViewDependable(paper);
     	bedroom.addItem(bedroomCracker);
     	bedroom.addItem(trash);
-    	bedroom.addItem(safe);
+    	bedroom.addItem(vault);
     	bedroom.addItem(paper);
 
-      	bunny = new Player(kitchen);
+      bunny = new Player(kitchen);
 
     	//Create the appartment world
     	String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
@@ -237,7 +256,7 @@ public class Main {
     		false, false);
     	Item backpack = new Item("backpack", 
     		"",
-    		"An open backpack.",
+    		"An open backpack, there's a cracker in it!",
     		"A backpack is standing next to a desk. It's locked with a padlock.", 
     		false, true);
     	Item desk = new Item("desk", 
@@ -280,23 +299,29 @@ public class Main {
     		"This locker has a cracker in it!",
     		"",
     		true, false);
-      Item anyLocker = new Item("lockers",
+      Item locker = new Item("locker",
         "",
-        "An empty locker.",
+        "An empty locker...",
+        "",
+        true, false);
+      Item lockers = new Item("lockers",
+        "",
+        "Lockers ranging from locker001-locker999.",
         "",
         true, true);
     	locker222.addDependable(corridorCracker);
       locker222.addViewDependable(corridorCracker);
-      poster.addViewDependable(locker222);
+      //poster.addViewDependable(locker222);
     	corridor.addItem(corridorCracker);
     	corridor.addItem(poster);
     	corridor.addItem(locker222);
-      corridor.addItem(anyLocker);
+      corridor.addItem(locker);
+      corridor.addItem(lockers);
 
       bunny = new Player(classroom);
 
     	//Create the school world
-    	String plot = "You are a small sexy class pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n" 
+    	String plot = "You are a small pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n" 
     		+"You have the munchies for crackers.\n"
     		+"Find all three crackers in the school to still your hunger!";
     	String instructions = "";
