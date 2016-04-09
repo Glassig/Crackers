@@ -109,6 +109,7 @@ public class Synonyms {
 		look.put("survey", 1);
 		look.put("view", 1);
 		look.put("watch", 1);
+		look.put("open", 1); //for the open locker-command
 	}
 
 	private void addUse() {
