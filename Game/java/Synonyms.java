@@ -50,6 +50,7 @@ public class Synonyms {
 		go.put("jump", 1);
 		go.put("move", 1);
 		go.put("run", 1);
+		go.put("stand", 1);
 		go.put("visit", 1);
 		go.put("walk", 1);
 	}
@@ -112,6 +113,7 @@ public class Synonyms {
 
 	private void addUse() {
 		use.put("apply", 1);
+		use.put("give", 1);
 		use.put("insert", 1);
 		use.put("practice", 1);
 		use.put("throw", 1);
