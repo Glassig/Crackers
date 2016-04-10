@@ -99,23 +99,21 @@ public class Main {
 
        		//handle user input here!
           String[] comWords = com.split("[\\W]");
-          List<TaggedWord> comTagged = tagger.postag(comWords); //ONLY VB AND NN INCLUDED
+          List<TaggedWord> tmp = tagger.postag(comWords); //ONLY VB AND NN INCLUDED
+
+          List<TaggedWord> comTagged = synonyms.betterTagging(tmp);
 
           boolean foundValidVerb = false;
           String vb = null;
           for(TaggedWord tw : comTagged){
            	if(tw.tag().startsWith("VB")){
-            		String synVb = synonyms.verbs(tw.word());
-            		if(synVb != null){
-              			foundValidVerb = true;
-              			vb = synVb;
-              		}
-            	}
-            	else if(tw.tag().startsWith("NN") && foundValidVerb){
-              		parser.parse(bunny, world, vb, tw.word());
-              		foundValidVerb = false;	//might not be needed
-            	}
-          	}
+              	foundValidVerb = true;
+              	vb = tw.word();
+            } else if(tw.tag().startsWith("NN") && foundValidVerb){
+              	parser.parse(bunny, world, vb, tw.word());
+              	foundValidVerb = false;	//might not be needed
+            }
+          }
 
        	}
 

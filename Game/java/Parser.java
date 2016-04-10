@@ -20,8 +20,8 @@ public class Parser {
 	* of it.
 	*/
 	public void parse(Player player, World world, String verb, String noun){
-		verb.toLowerCase();
-		noun.toLowerCase();
+		//verb.toLowerCase();
+		//noun.toLowerCase(); we already do this in main
 
 		switch (verb) {
          case "go":

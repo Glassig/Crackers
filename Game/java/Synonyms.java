@@ -1,5 +1,8 @@
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.List;
+
+import edu.stanford.nlp.ling.TaggedWord;
 
 /*
 HashMap commands:
@@ -121,13 +124,25 @@ public class Synonyms {
 		use.put("utilize", 1);
 	}
 
+/*
+@param: a list of tagged words
+@return: A list of better tagged words, where some nouns are now verbs because they should be that.
 
-	public ArrayList<String> verbTags(ArrayList<String> inputVerbs) {
-		ArrayList<String> resultVerb = new ArrayList<String>();
-		for (String verb: inputVerbs) {
-			resultVerb.add(verbs(verb));
+So, for each word in input, we see if it should be a verb by using the "verbs" method. If it
+returns something, we create a new tagged word with that verb and the tag verb, we remove the old one 
+(there is no replace-function) and then add the new tagged word.
+*/
+	public List<TaggedWord> betterTagging(List<TaggedWord> input) {
+		for(int i = 0; i < input.size(); i++) {
+			TaggedWord wd = input.get(i);
+			String verbifyed = verbs(wd.word());
+			if(verbifyed != null) {
+				TaggedWord res = new TaggedWord(verbifyed, "VB");
+				input.remove(i); //if we don't remove the word, it will get moved one spot.
+				input.add(i, res); //insert the new verb.
+			}
 		}
-		return resultVerb;
+		return input;
 	}
 
 	public String verbs(String vb) {
