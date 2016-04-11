@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/batch.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/js.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/jsapi.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/jsapi-1.0-base.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/junit-4.8.1.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/sphinx4.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/tags.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/TIDIGITS_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/WSJ_8gau_13dCep_8kHz_31mel_200Hz_3500Hz.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/sphinx4/bin/sphinx4-1.0beta6-bin/lib/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/stanford-postagger.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/stanford-postagger-3.6.0.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/stanford-postagger-3.6.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/kashi/Documents/jars/stanford-postagger-3.6.0-sources.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
