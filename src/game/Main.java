@@ -4,35 +4,14 @@
 package game;
 
 import java.util.Scanner;
-import java.util.List;
-import java.lang.StringBuilder;
-
-import edu.stanford.nlp.ling.TaggedWord;
 
 public class Main {
-
-	public static final String ANSI_RESET = "\u001B[0m";
-	public static final String ANSI_RED = "\u001B[31m";
-	public static final String ANSI_GREEN = "\u001B[32m";
-	public static final String ANSI_YELLOW = "\u001B[33m";
-	public static final String ANSI_BLUE = "\u001B[34m";
-	public static final String ANSI_PURPLE = "\u001B[35m";
-	public static final String ANSI_CYAN = "\u001B[36m";
-	public static final String ANSI_WHITE = "\u001B[37m";
 
 	private static Player bunny;
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
-	private static POSTagger tagger = new POSTagger("models/english-left3words-distsim.tagger");
-	private static Synonyms synonyms = new Synonyms();
-	private static Parser parser = new Parser();
 
 	public static void main(String[] args) {
-
-		/* Here's a color-sample for colors in terminal. */
-		System.out.println("Color test: " + ANSI_RED + "     red" + ANSI_GREEN + "     green" + ANSI_YELLOW
-				+ "     yellow" + ANSI_BLUE + "     blue" + ANSI_PURPLE + "     purple" + ANSI_CYAN + "     cyan"
-				+ ANSI_WHITE + "     white" + ANSI_RESET);
 
 		System.out.println("\n*~ Welcome to Crackers! ~*\n" + "Which version do you want to play? [text/speech]\n");
 
@@ -40,75 +19,17 @@ public class Main {
 		String ans = scan.nextLine();
 		if (ans.equals("text")) {
 			createSchool();
+			TextVersion game = new TextVersion(world, bunny);
+			game.run();
 		} else if (ans.equals("speech")) {
 			createApartment();
+			SpeechVersion game = new SpeechVersion(world, bunny);
+			game.run();
 		} else {
 			System.out.println("Sorry, but I couldn't understand you. Bye!\n");
 			System.exit(0);
 		}
 
-		System.out.println("\n" + ANSI_CYAN + "PLOT" + ANSI_RESET + ":\n" + world.getPlot() + "\n");
-		System.out.println(ANSI_CYAN + "INSTRUCTIONS:\n" + world.getInst() + "\n" + ANSI_RESET);
-
-		// This runs until you have collected all 3 crackers!
-		while (bunny.getCrackers() < 3) {
-			System.out.print(ANSI_BLUE + "@" + ANSI_PURPLE + bunny.getCurrentRoom().getName() + ": " + ANSI_RESET);
-			String com = scan.nextLine();
-			com = com.toLowerCase();
-			bunny.updateCommandCount();
-
-			if (com.contains("quit") || com.contains("exit")) {
-				System.exit(0);
-				continue;
-			} else if (com.contains("help")) {
-				System.out.println(world.getInst() + "\n");
-				continue;
-			} else if (com.contains("items") || com.contains("inventory")) {
-				System.out.println("Your inventory contains:");
-				if (bunny.getInventory().isEmpty()) {
-					System.out.println("nothing at all.");
-				} else {
-					for (Item item : bunny.getInventory()) {
-						System.out.println(item.getName());
-					}
-				}
-				System.out.println(""); // needed for newline
-				continue;
-			} else if (com.equals("look around")) {
-				System.out.println("You look around the room and see:");
-				for (Item item : bunny.getCurrentRoom().getItems()) {
-					if (item.getViewable()) {
-						System.out.println(item.getName());
-					}
-				}
-				System.out.println("");
-				continue;
-			}
-
-			// handle user input here!
-			String[] comWords = com.split("[\\W]");
-			List<TaggedWord> tmp = tagger.postag(comWords); // ONLY VB AND NN
-															// INCLUDED
-
-			List<TaggedWord> comTagged = synonyms.betterTagging(tmp);
-
-			boolean foundValidVerb = false;
-			String vb = null;
-			for (TaggedWord tw : comTagged) {
-				if (tw.tag().startsWith("VB")) {
-					foundValidVerb = true;
-					vb = tw.word();
-				} else if (tw.tag().startsWith("NN") && foundValidVerb) {
-					parser.parse(bunny, world, vb, tw.word());
-					foundValidVerb = false; // might not be needed
-				}
-			}
-
-		}
-
-		// victory!
-		System.out.println("Victory! You are no longer hungry.\n" + "You completed the game using "
-				+ bunny.getCommandCount() + "commands. \n" + "Thank you for playing! <3\n");
 	}
 
 	/*
