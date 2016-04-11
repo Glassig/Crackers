@@ -1,4 +1,5 @@
 package game;
+
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,15 +22,13 @@ public class Synonyms {
 	private HashMap<String, Integer> look;
 	private HashMap<String, Integer> eat;
 
-	//NOUNS maybe?
-
+	// NOUNS maybe?
 
 	/*
-	key = String
-	value = int: 
-		if 1: only 1 meaning
-		if 2: two possible meanins, look at noun. (for example, move to livingroom AND move the chair)
-	*/
+	 * key = String value = int: if 1: only 1 meaning if 2: two possible
+	 * meanins, look at noun. (for example, move to livingroom AND move the
+	 * chair)
+	 */
 	public Synonyms() {
 		createLists();
 	}
@@ -113,7 +112,7 @@ public class Synonyms {
 		look.put("survey", 1);
 		look.put("view", 1);
 		look.put("watch", 1);
-		look.put("open", 1); //for the open locker-command
+		look.put("open", 1); // for the open locker-command
 	}
 
 	private void addUse() {
@@ -127,50 +126,43 @@ public class Synonyms {
 		use.put("utilize", 1);
 	}
 
-/*
-@param: a list of tagged words
-@return: A list of better tagged words, where some nouns are now verbs because they should be that.
-
-So, for each word in input, we see if it should be a verb by using the "verbs" method. If it
-returns something, we create a new tagged word with that verb and the tag verb, we remove the old one 
-(there is no replace-function) and then add the new tagged word.
-*/
+	/*
+	 * @param: a list of tagged words
+	 * 
+	 * @return: A list of better tagged words, where some nouns are now verbs
+	 * because they should be that.
+	 * 
+	 * So, for each word in input, we see if it should be a verb by using the
+	 * "verbs" method. If it returns something, we create a new tagged word with
+	 * that verb and the tag verb, we remove the old one (there is no
+	 * replace-function) and then add the new tagged word.
+	 */
 	public List<TaggedWord> betterTagging(List<TaggedWord> input) {
-		for(int i = 0; i < input.size(); i++) {
+		for (int i = 0; i < input.size(); i++) {
 			TaggedWord wd = input.get(i);
 			String verbifyed = verbs(wd.word());
-			if(verbifyed != null) {
+			if (verbifyed != null) {
 				TaggedWord res = new TaggedWord(verbifyed, "VB");
-				input.remove(i); //if we don't remove the word, it will get moved one spot.
-				input.add(i, res); //insert the new verb.
+				input.remove(i); // if we don't remove the word, it will get
+									// moved one spot.
+				input.add(i, res); // insert the new verb.
 			}
 		}
 		return input;
 	}
 
 	public String verbs(String vb) {
-		if(go.containsKey(vb)) {
+		if (go.containsKey(vb)) {
 			return "go";
-		} else if(use.containsKey(vb)) {
+		} else if (use.containsKey(vb)) {
 			return "use";
-		} else if(take.containsKey(vb)) {
+		} else if (take.containsKey(vb)) {
 			return "take";
-		} else if(look.containsKey(vb)) {
+		} else if (look.containsKey(vb)) {
 			return "look";
-		} else if(eat.containsKey(vb)) {
+		} else if (eat.containsKey(vb)) {
 			return "eat";
 		}
 		return null;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
