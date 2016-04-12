@@ -17,10 +17,10 @@ public class TextVersion {
 
 	private World world;
 	private Player bunny;
-	private static Scanner scan;
-	private static POSTagger tagger;
-	private static Synonyms synonyms;
-	private static Parser parser;
+	private Scanner scan;
+	private POSTagger tagger;
+	private Synonyms synonyms;
+	private Parser parser;
 
 	public TextVersion(World world, Player player) {
 		this.world = world;
@@ -51,8 +51,18 @@ public class TextVersion {
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
-				writeToFile(lines, file);
-				System.exit(0);
+				System.out.println("Do you want to quit playing? [yes/no]");
+				System.out.print("Answer: ");
+				String ans = scan.nextLine();
+				ans.toLowerCase();
+				if (ans.equals("no")) {
+					continue;
+				} else if (ans.equals("yes")) {
+					writeToFile(lines, file);
+					System.exit(0);
+				} else {
+					continue;
+				}
 			} else if (com.contains("help")) {
 				System.out.println(world.getInst() + "\n");
 				continue;

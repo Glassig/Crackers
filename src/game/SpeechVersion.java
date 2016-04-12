@@ -1,6 +1,7 @@
 package game;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,14 +19,16 @@ public class SpeechVersion {
 
 	private World world;
 	private Player bunny;
-	private static POSTagger tagger;
-	private static Synonyms synonyms;
-	private static Parser parser;
+	private Scanner scan;
+	private POSTagger tagger;
+	private Synonyms synonyms;
+	private Parser parser;
 	private ConfigurationManager cm;
 
 	public SpeechVersion(World world, Player player) {
 		this.world = world;
 		this.bunny = player;
+		scan = new Scanner(System.in);
 		tagger = new POSTagger("models/english-left3words-distsim.tagger");
 		synonyms = new Synonyms();
 		parser = new Parser();
@@ -68,9 +71,18 @@ public class SpeechVersion {
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
-				writeToFile(lines, file);
-				System.exit(0);
-				continue;
+				System.out.println("Do you want to quit playing? [yes/no]");
+				System.out.print("Answer: ");
+				String ans = scan.nextLine();
+				ans.toLowerCase();
+				if (ans.equals("no")) {
+					continue;
+				} else if (ans.equals("yes")) {
+					writeToFile(lines, file);
+					System.exit(0);
+				} else {
+					continue;
+				}
 			} else if (com.contains("help")) {
 				System.out.println(world.getInst() + "\n");
 				continue;
