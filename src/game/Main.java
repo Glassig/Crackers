@@ -165,6 +165,7 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the school to still your hunger!";
+		
 		String instructions = "Type commands in order to progress.\n"
 				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
 				+ "Try typing as if you were talking to any human.\n"
