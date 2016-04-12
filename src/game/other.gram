@@ -5,21 +5,19 @@ grammar other;
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
 public <noun> = (<items> | <rooms> );
 public <cmd> = (exit | quit | look around | items | help | yes | no);
-public <con> =  [ at | to ];
+public <con> =  [ at | to | towards | up | onto ];
 public <det> = [ a | an | my | that | this | the ];
 
-public <go> = (enter | go | head | jump | move | run | stand | visit | walk);
+public <go> = (enter | go | jump | move | run | walk);
 
-public <take> = (acquire | attain | gain | gather | get | grab | grip | hold | pick | seize | snag | steal | take);
+public <take> = (gather | get | grab | pick | take);
 
-public <eat> = (absorb | bite | chew | chow | consume | devour | eat | feed | gobble | ingest | munch | snack | swallow);
+public <eat> = ( bite | consume | eat | munch | swallow);
 
-public <look> = (admire | behold | check | contemplate | discover | examine | gaze | glance | inspect | look | observe | peer | read | scan | search | see | stare | study | survey | view | watch | open);
+public <look> = ( check | examine | inspect | look | observe | read | search | study | view | watch | open | unlock );
 
-public <use> = (apply | give | insert | practice | throw | unlock | use | utilize);
+public <use> = ( give | throw | use );
 
-public <items> = (cracker | crackers | table | box | cat | toy | cat toy | trash | vault | paper | note );
-
-public <numbers> = (oh {0} | zero {0} | one {1} | two {2} | three {3} | four {4} | five {5} | six {6}  | seven {7} | eight {8} | nine {9} | ten {10} | fourteen {14} | seventy five {75} | one thousand four hundred seventy five {1475} ) *;
+public <items> = (cracker | table | box | cat | toy | cat toy | trash | trash can | paper | note | vault );
 
 public <rooms> = livingroom | bedroom | kitchen;

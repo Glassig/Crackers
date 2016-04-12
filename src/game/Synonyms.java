@@ -109,6 +109,7 @@ public class Synonyms {
 		look.put("stare", 1);
 		look.put("study", 1);
 		look.put("survey", 1);
+		look.put("unlock", 1);
 		look.put("view", 1);
 		look.put("watch", 1);
 		look.put("open", 1); // for the open locker-command
@@ -120,7 +121,6 @@ public class Synonyms {
 		use.put("insert", 1);
 		use.put("practice", 1);
 		use.put("throw", 1);
-		use.put("unlock", 1);
 		use.put("use", 1);
 		use.put("utilize", 1);
 	}
