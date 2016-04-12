@@ -1,6 +1,6 @@
 #JSGF V1.0;
 
-grammar grammar;
+grammar hello;
 
 import <other.verb>;
 import <other.noun>;
