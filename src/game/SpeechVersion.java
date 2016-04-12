@@ -1,6 +1,12 @@
 package game;
 
 import java.util.List;
+import java.util.Date;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.nio.file.Files;
 
 import edu.cmu.sphinx.demo.helloworld.HelloWorld;
 import edu.cmu.sphinx.frontend.util.Microphone;
@@ -39,6 +45,12 @@ public class SpeechVersion {
 			System.exit(1);
 		}
 
+		List<String> lines = new ArrayList<String>();
+		Date date = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
+		String filename = "/speech/" + ft.format(date) + ".txt";
+		Path file = Paths.get(filename);
+
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
 		System.out.println("INSTRUCTIONS:\n" + world.getInst() + "\n");
 
@@ -53,9 +65,12 @@ public class SpeechVersion {
 			String com = result.getBestFinalResultNoFiller();
 			com = com.toLowerCase();
 			System.out.println(com);
+			lines.add(com);
+			lines.add("\n");
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
+				Files.write(file, lines, Charset.forName("UTF-8"));
 				System.exit(0);
 				continue;
 			} else if (com.contains("help")) {
