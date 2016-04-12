@@ -7,7 +7,6 @@ import <other.noun>;
 import <other.cmd>;
 import <other.con>;
 import <other.det>;
-import <other.numbers>;
 
-public <input> = <verb> <con> <det> <noun> | <cmd> | <numbers>;
+public <input> = <verb> <con> <det> <noun> | <cmd> ;
 
