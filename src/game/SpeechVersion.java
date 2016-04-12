@@ -36,7 +36,7 @@ public class SpeechVersion {
 		Recognizer recognizer = (Recognizer) cm.lookup("recognizer");
 		recognizer.allocate();
 
-		// start the microphone or exit if the programm if this is not possible
+		// start the microphone or exit if the program if this is not possible
 		Microphone microphone = (Microphone) cm.lookup("microphone");
 		if (!microphone.startRecording()) {
 			System.out.println("Cannot start microphone.");
@@ -75,7 +75,7 @@ public class SpeechVersion {
 				ans.toLowerCase();
 				System.out.println(ans);
 				if (ans.equals("no")) {
-					System.out.println(); //newline
+					System.out.println(); // newline
 					continue;
 				} else if (ans.equals("yes")) {
 					System.out.println("Aww okay, bye! :D");
