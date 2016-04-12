@@ -5,6 +5,8 @@ grammar grammar;
 import <other.verb>;
 import <other.noun>;
 import <other.cmd>;
+import <other.con>;
+import <other.det>;
 
-public <input> = <verb> <noun> | <cmd>;
+public <input> = <verb> <con> <det> <noun> | <cmd> ;
 

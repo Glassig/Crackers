@@ -3,8 +3,10 @@
 grammar other;
 
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
-public <noun> = (<items> | <numbers> | <rooms> );
+public <noun> = (<items> | <rooms> );
 public <cmd> = (exit | quit | look around | items | help | yes | no);
+public <con> =  [ at | to ]*;
+public <det> = [ a | an | my | that | this | the ]*;
 
 public <go> = (enter | go | head | jump | move | run | stand | visit | walk);
 
