@@ -2,8 +2,6 @@ package game;
 
 import java.util.List;
 import java.util.Date;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.nio.file.*;
@@ -67,11 +65,10 @@ public class SpeechVersion {
 			com = com.toLowerCase();
 			System.out.println(com);
 			lines.add(com);
-			lines.add("\n");
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
-				Files.write(file, lines, Charset.forName("UTF-8"));
+				writeToFile(lines, file);
 				System.exit(0);
 				continue;
 			} else if (com.contains("help")) {
@@ -123,5 +120,12 @@ public class SpeechVersion {
 		// victory!
 		System.out.println("Victory! You are no longer hungry.\n" + "You completed the game using "
 				+ bunny.getCommandCount() + "commands. \n" + "Thank you for playing! <3\n");
+		writeToFile(lines, file);
+		System.exit(0);
+	}
+
+	public void writeToFile(List<String> lines, Path file) throws IOException {
+		lines.add("Number of commands: " + bunny.getCommandCount());
+		Files.write(file, lines, Charset.forName("UTF-8"));
 	}
 }
