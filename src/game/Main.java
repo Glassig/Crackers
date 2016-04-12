@@ -3,6 +3,7 @@
  */
 package game;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		System.out.println("\n*~ Welcome to Crackers! ~*\n" + "Which version do you want to play? [text/speech]\n");
 

@@ -6,9 +6,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.nio.file.Files;
+import java.nio.file.*;
+import java.io.IOException;
+import java.nio.charset.*;
 
-import edu.cmu.sphinx.demo.helloworld.HelloWorld;
 import edu.cmu.sphinx.frontend.util.Microphone;
 import edu.cmu.sphinx.recognizer.Recognizer;
 import edu.cmu.sphinx.result.Result;
@@ -33,7 +34,7 @@ public class SpeechVersion {
 		cm = new ConfigurationManager(SpeechVersion.class.getResource("helloworld.config.xml"));
 	}
 
-	public void run() {
+	public void run() throws IOException {
 		Recognizer recognizer = (Recognizer) cm.lookup("recognizer");
 		recognizer.allocate();
 
