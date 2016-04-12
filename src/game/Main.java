@@ -54,7 +54,7 @@ public class Main {
 		// LIVINGROOM
 		Room livingroom = new Room("livingroom", "It's a livingroom! You get a cozy feeling.");
 		Item livingroomCracker = new Item("cracker", "eat", "There's a cracker laying on the floor!",
-				"There's a cracker laying on the floor right next to the cat. If only you could fet rid of that cat...",
+				"There's a cracker laying on the floor right next to the cat. If only you could get rid of that cat...",
 				false, true);
 		Item cat = new Item("cat", "", "The cat is gone!",
 				"A scary looking cat is laying on the floor. Better stay away.", false, true);
@@ -68,7 +68,7 @@ public class Main {
 		Room bedroom = new Room("bedroom", "It's a bedroom! You feel a bit sleepy.");
 		Item bedroomCracker = new Item("cracker", "eat", "There's a cracker laying in the safe!!",
 				"There's a cracker somewhere in this room...", false, false);
-		Item trash = new Item("trashcan", "", "A trash can, it's almost empty except for a small paper.", "", true,
+		Item trash = new Item("trash", "", "A trash can, it's almost empty except for a small paper.", "", true,
 				true);
 		Item vault = new Item("vault", "", "The vault is open, and there's a cracker in it!",
 				"A vault, but it's locked with a 4-digit code.", false, true);

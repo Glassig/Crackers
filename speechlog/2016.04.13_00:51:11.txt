@@ -1,0 +1,385 @@
+
+enter to kitchen
+enter to kitchen
+enter kitchen
+go to that kitchen
+go to that kitchen
+
+go to the kitchen
+go that kitchen
+go to the kitchen
+
+check cracker
+take the cracker
+check the cracker
+look that cracker
+look at cracker
+get to that cracker
+look at cracker
+grab paper
+get cracker
+get to trash can
+get cracker
+get cracker
+look at paper
+check cracker
+look around
+grab cracker
+grab table
+grab vault
+grab box
+enter kitchen
+enter the kitchen
+go to that kitchen
+go to the kitchen
+jump to the kitchen
+move to the kitchen
+run onto that kitchen
+run onto livingroom
+read onto that kitchen
+run to the kitchen
+walk to the kitchen
+walk to the bedroom
+walk to that bedroom
+walk to that bedroom
+enter to bedroom
+go to the bedroom
+jump to that bedroom
+move to the bedroom
+help
+run to that bedroom
+run to the bedroom
+walk to that bedroom
+look around
+get to trash
+get trash
+get to this trash
+get that trash
+grab the trash
+get trash can
+pick trash
+get trash
+take the trash
+take trash
+jump trash
+get trash
+eat trash
+pick trash
+take trash
+jump trash
+grab kitchen
+take trash can
+grab kitchen
+grab paper
+grab paper
+take kitchen
+take cat
+look around
+take vault
+grab vault
+take vault
+take trash
+go to livingroom
+go cat
+go kitchen
+go cat
+look around
+take box
+
+bite the cracker
+bite cracker
+study cracker
+bite the cracker
+consume that cracker
+consume cracker
+consume cat
+consume the cat
+yes
+eat the cat
+
+eat the cracker
+eat to cracker
+eat to cracker
+eat to cracker
+eat cracker
+eat to cracker
+eat to cracker
+swallow the cracker
+swallow cracker
+take the cracker
+check to cracker
+take the cracker
+take the cracker
+take the cracker
+take the cracker
+take the cracker
+check the cracker
+take the cat
+check the cat
+examine the cat
+check cat
+take cat
+take cracker
+pick my kitchen
+move cat
+inspect cat
+inspect the cat
+
+grab kitchen
+
+look around
+inspect the box
+look at that vault
+check the box
+check the box
+look box
+take vault
+check vault
+no
+take vault
+enter to kitchen
+take vault
+take box
+take vault
+take vault
+take vault
+take vault
+check the box
+take the cat
+take the cat
+check the cat
+use vault
+use vault
+observe the cat
+observe cat
+observe cracker
+observe vault
+observe box
+observe the vault
+read to the box
+search to box
+search that table
+
+
+search to cat
+search cat
+search cracker
+study cracker
+study cracker
+study cracker
+study cat
+study that cracker
+study the cracker
+study the cracker
+view the cracker
+view the cat
+go livingroom
+view cat
+grab paper
+view cracker
+view that cracker
+view the cracker
+watch to cracker
+pick cracker
+watch to cracker
+watch cracker
+watch cat
+enter toy mouse
+check toy
+watch toy
+watch to toy
+watch to toy mouse
+watch cat
+run cat
+
+run cat
+enter to cat
+open that toy
+enter vault
+enter vault
+items
+enter toy
+open at toy
+inventory
+inventory
+items
+
+run cat
+run cat
+run the cat
+run the cat
+bite cat
+run that cat
+open cat
+yes
+unlock that cat
+unlock cat
+unlock toy
+unlock cat
+unlock kitchen
+unlock kitchen
+unlock onto toy
+unlock toy
+items
+take toy
+
+look around
+eat to cracker
+observe cracker
+study cat
+search cat
+observe cat
+pick vault
+observe box
+pick vault
+search the cat
+observe the cat
+observe the cracker
+search that cracker
+unlock to cracker
+eat that trash can
+view that cracker
+pick cracker
+
+give the cracker
+give the cracker
+grab paper
+yes
+yes
+give that cat
+give that cat
+give toy mouse
+give toy
+throw toy
+no
+give toy mouse
+swallow toy
+give toy
+give toy
+yes
+check the livingroom
+pick kitchen
+throw toy
+throw toy
+throw toy
+throw vault
+throw cat toy
+throw to cat
+throw the cat
+throw the cat
+throw that toy mouse
+throw the cracker
+throw cracker
+use cracker
+use toy
+use cat
+use to cracker
+use to cracker
+use the cracker
+use that cracker
+use that cat
+use the table
+use to box
+use that vault
+use to box
+use to vault
+use to vault
+use to vault
+use to vault
+use table
+use cracker
+use to cracker
+use that table
+use the table
+use the table
+use to cracker
+use to box
+use the box
+use to vault
+use table
+use to cracker
+use to cat
+use to cat
+use to toy mouse
+use the trash
+use the trash
+
+take the trash
+observe trash can
+take toy
+take paper
+use paper
+use to paper
+use to paper
+use the paper
+use that paper
+use the vault
+use to paper
+items
+enter at paper
+enter the bedroom
+items
+
+go cat
+go bedroom
+quit
+look around
+study the trash
+study that paper
+inspect vault
+inspect vault
+inspect vault
+enter vault
+no
+read that vault
+read vault
+examine vault
+go cracker
+
+go kitchen
+items
+look around
+move toy
+go to that livingroom
+go to the bedroom
+go to the kitchen
+enter that cat
+enter the bedroom
+go to the bedroom
+jump to the bedroom
+move to the bedroom
+run to the bedroom
+walk to the bedroom
+enter to livingroom
+study livingroom
+go to that livingroom
+jump to that livingroom
+move livingroom
+move to the livingroom
+move to livingroom
+
+run to that livingroom
+study livingroom
+enter livingroom
+study livingroom
+walk to that livingroom
+walk cat
+
+help
+enter to kitchen
+check toy
+go to the kitchen
+go kitchen
+jump kitchen
+jump onto box
+jump onto table
+jump onto box
+move to the box
+
+jump onto box
+go to that box
+enter to vault
+go vault
+jump onto box
+exit
+Number of commands: 384
