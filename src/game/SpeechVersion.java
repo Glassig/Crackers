@@ -49,7 +49,7 @@ public class SpeechVersion {
 		List<String> lines = new ArrayList<String>();
 		Date date = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
-		String filename = ft.format(date) + ".txt";
+		String filename = "speechlog/" + ft.format(date) + ".txt";
 		Path file = Paths.get(filename);
 
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");

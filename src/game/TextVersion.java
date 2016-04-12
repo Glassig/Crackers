@@ -7,6 +7,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 
 import edu.stanford.nlp.ling.TaggedWord;
@@ -29,12 +31,12 @@ public class TextVersion {
 		parser = new Parser();
 	}
 
-	public void run() {
+	public void run() throws IOException {
 
 		List<String> lines = new ArrayList<String>();
 		Date date = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
-		String filename = "/speech/" + ft.format(date) + ".txt";
+		String filename = "textlog/" + ft.format(date) + ".txt";
 		Path file = Paths.get(filename);
 		
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
@@ -46,7 +48,6 @@ public class TextVersion {
 			String com = scan.nextLine();
 			com = com.toLowerCase();
 			lines.add(com);
-			lines.add("\n");
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
