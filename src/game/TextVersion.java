@@ -55,8 +55,8 @@ public class TextVersion {
 				System.out.print("Answer: ");
 				String ans = scan.nextLine();
 				ans.toLowerCase();
-				System.out.println(ans);
 				if (ans.equals("no")) {
+					System.out.println(); //newline
 					continue;
 				} else if (ans.equals("yes")) {
 					System.out.println("Aww okay, bye! :D");

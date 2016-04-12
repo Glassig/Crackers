@@ -1,0 +1,4 @@
+quit
+quit
+exit
+Number of commands: 3
