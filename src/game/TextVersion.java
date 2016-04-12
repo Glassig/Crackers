@@ -38,7 +38,7 @@ public class TextVersion {
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
 		String filename = "textlog/" + ft.format(date) + ".txt";
 		Path file = Paths.get(filename);
-		
+
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
 		System.out.println("INSTRUCTIONS:\n" + world.getInst() + "\n");
 
@@ -51,9 +51,8 @@ public class TextVersion {
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
-				Files.write(file, lines, Charset.forName("UTF-8"));
+				writeToFile(lines, file);
 				System.exit(0);
-				continue;
 			} else if (com.contains("help")) {
 				System.out.println(world.getInst() + "\n");
 				continue;
@@ -103,5 +102,12 @@ public class TextVersion {
 		// victory!
 		System.out.println("Victory! You are no longer hungry.\n" + "You completed the game using "
 				+ bunny.getCommandCount() + "commands. \n" + "Thank you for playing! <3\n");
+		writeToFile(lines, file);
+		System.exit(0);
+	}
+
+	public void writeToFile(List<String> lines, Path file) throws IOException {
+		lines.add("Number of commands: " + bunny.getCommandCount());
+		Files.write(file, lines, Charset.forName("UTF-8"));
 	}
 }
