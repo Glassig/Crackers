@@ -2,6 +2,12 @@ package game;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Date;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.nio.file.Files;
 
 import edu.stanford.nlp.ling.TaggedWord;
 
@@ -24,6 +30,13 @@ public class TextVersion {
 	}
 
 	public void run() {
+
+		List<String> lines = new ArrayList<String>();
+		Date date = new Date();
+		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
+		String filename = "/speech/" + ft.format(date) + ".txt";
+		Path file = Paths.get(filename);
+		
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
 		System.out.println("INSTRUCTIONS:\n" + world.getInst() + "\n");
 
@@ -32,9 +45,12 @@ public class TextVersion {
 			System.out.print("@" + bunny.getCurrentRoom().getName() + ": ");
 			String com = scan.nextLine();
 			com = com.toLowerCase();
+			lines.add(com);
+			lines.add("\n");
 			bunny.updateCommandCount();
 
 			if (com.contains("quit") || com.contains("exit")) {
+				Files.write(file, lines, Charset.forName("UTF-8"));
 				System.exit(0);
 				continue;
 			} else if (com.contains("help")) {
