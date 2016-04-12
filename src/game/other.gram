@@ -3,7 +3,7 @@
 grammar other;
 
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
-public <noun> = (<items> | <numbers> );
+public <noun> = (<items> | <numbers> | <rooms> );
 public <cmd> = (exit | quit | look around | items | help);
 
 public <go> = (enter | go | head | jump | move | run | stand | visit | walk);
@@ -19,3 +19,5 @@ public <use> = (apply | give | insert | practice | throw | unlock | use | utiliz
 public <items> = (cracker | crackers | table | box | cat | toy | cat toy | trash | vault | paper | note );
 
 public <numbers> = (oh {0} | zero {0} | one {1} | two {2} | three {3} | four {4} | five {5} | six {6}  | seven {7} | eight {8} | nine {9} | ten {10} | fourteen {14} | seventy five {75} | one thousand four hundred seventy five {1475} ) *;
+
+public <rooms> = livingroom | bedroom | kitchen;
