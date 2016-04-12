@@ -87,6 +87,7 @@ public class SpeechVersion {
 				}
 			} else if (com.contains("help")) {
 				System.out.println(world.getInst() + "\n");
+				System.out.println("You have eaten " + bunny.getCrackers() + " crackers. \n");
 				continue;
 			} else if (com.contains("items") || com.contains("inventory")) {
 				System.out.println("Your inventory contains:");

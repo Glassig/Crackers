@@ -88,7 +88,15 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the apartment to still your hunger!";
-		String instructions = "";
+		String instructions = "Speak commands in order to progress. Commands to help you along consist: \n" 
+				+ "   *   \"items\" or \"inventory\" will tell you what you are carrying \n"
+				+ "   *   \"look around\" tells you about your surrounding.\n"
+				+ "   *   \"quit\" or \"exit\" quits the game"
+				+ "   *   \"help\" tells you these instructions AND OH MY GAAAWD IT'S AN INFINITE LOOP OF HELPS!!!.\n"
+				+ "Moving on. Your goal is to get all three crackers.\n"
+				+ "Commands mostly follow the structure of <verb> <noun> with voluntary determiners and conjunctions inbetween. Try it out!\n"
+				+ "Available rooms in this game: kitchen, livingroom and bedroom\n";
+;
 
 		world = new World(plot, instructions);
 		world.addRoom(kitchen);
@@ -156,7 +164,14 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the school to still your hunger!";
-		String instructions = "";
+		String instructions = "Type commands in order to progress. Commands to help you along consist: \n" 
+				+ "   *   \"items\" or \"inventory\" will tell you what you are carrying \n"
+				+ "   *   \"look around\" tells you about your surrounding.\n"
+				+ "   *   \"quit\" or \"exit\" quits the game"
+				+ "   *   \"help\" tells you these instructions AND OH MY GAAAWD IT'S AN INFINITE LOOP OF HELPS!!!.\n"
+				+ "Moving on. Your goal is to get all three crackers.\n"
+				+ "Commands mostly follow the structure of <verb> <noun> with voluntary determiners and conjunctions inbetween. Try it out!\n"
+				+ "Available rooms in this game: classroom, corridor and classroom\n";
 
 		world = new World(plot, instructions);
 		world.addRoom(cafeteria);
