@@ -8,5 +8,5 @@ import <other.cmd>;
 import <other.con>;
 import <other.det>;
 
-public <input> = <verb> <con> <det> <noun> | <cmd> ;
+public <input> = <verb> <con> <det> <noun> | <cmd>;
 
