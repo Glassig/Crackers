@@ -1,7 +1,3 @@
-#JSGF V1.0;
-
-grammar grammar;
-
 
 public <all> = (<go> | <take> | <eat> | <look> | <use> | <cmd> | <items> | <numbers> ) *;
 
