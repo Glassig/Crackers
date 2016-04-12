@@ -24,7 +24,7 @@ public class SpeechVersion {
 		tagger = new POSTagger("models/english-left3words-distsim.tagger");
 		synonyms = new Synonyms();
 		parser = new Parser();
-		cm = new ConfigurationManager(HelloWorld.class.getResource("helloworld.config.xml"));
+		cm = new ConfigurationManager(SpeechVersion.class.getResource("helloworld.config.xml"));
 	}
 
 	public void run() {

@@ -1,3 +1,7 @@
+#JSGF V1.0;
+
+grammar grammar;
+
 public <go> = (enter | go | head | jump | move | run | stand | visit | walk);
 
 public <take> = (acquire | attain | gain | gather | get | grab | grip | hold | pick | seize | snag | steal | take);
