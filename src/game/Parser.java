@@ -152,9 +152,9 @@ public class Parser {
 					}
 					// special case
 					if (noun.equals("vault") && !item.getStatus()) {
-						System.out.print("Enter code: ");
+						System.out.print("Enter code (use keyboard): ");
 						String code = scan.nextLine();
-						if (code.equals("1475")) {
+						if (code.equals("1475") || code.equals("one four seven five")) {
 							System.out.println("The code worked! The vault is now open.\n");
 							item.setStatus(true);
 							for (Item dep : item.getDependables()) {

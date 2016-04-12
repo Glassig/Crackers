@@ -55,12 +55,15 @@ public class TextVersion {
 				System.out.print("Answer: ");
 				String ans = scan.nextLine();
 				ans.toLowerCase();
+				System.out.println(ans);
 				if (ans.equals("no")) {
 					continue;
 				} else if (ans.equals("yes")) {
+					System.out.println("Aww okay, bye! :D");
 					writeToFile(lines, file);
 					System.exit(0);
 				} else {
+					System.out.println("I'll take that as a no.\n");
 					continue;
 				}
 			} else if (com.contains("help")) {
