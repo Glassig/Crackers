@@ -30,61 +30,31 @@
     <!-- word recognizer configuration                            -->
     <!-- ******************************************************** -->
 
-    <component name="recKitchen" type="edu.cmu.sphinx.recognizer.Recognizer">
-        <property name="decoder" value="decoderKitchen"/>
+    <component name="recognizer" type="edu.cmu.sphinx.recognizer.Recognizer">
+        <property name="decoder" value="decoder"/>
         <propertylist name="monitors">
             <item>accuracyTracker </item>
             <item>speedTracker </item>
             <item>memoryTracker </item>
         </propertylist>
     </component>
-    <component name="recLivingroom" type="edu.cmu.sphinx.recognizer.Recognizer">
-    	<property name="decoder" value="decoderLivingroom"></property>
-    	<propertylist name="monitors">
-    		<item>accuracyTracker</item>
-    		<item>speedTracker</item>
-    		<item>memoryTracker</item></propertylist>
-    </component>
-    <component name="recBedroom" type="edu.cmu.sphinx.recognizer.Recognizer">
-    	<property name="decoder" value="decoderBedroom"></property>
-    	<propertylist name="monitors">
-    		<item>accuracyTracker</item>
-    		<item>speedTracker</item>
-    		<item>memoryTracker</item></propertylist>
-    </component>
 
     <!-- ******************************************************** -->
     <!-- The Decoder   configuration                              -->
     <!-- ******************************************************** -->
 
-    <component name="decoderKitchen" type="edu.cmu.sphinx.decoder.Decoder">
-        <property name="searchManager" value="searchManagerKitchen"/>
+    <component name="decoder" type="edu.cmu.sphinx.decoder.Decoder">
+        <property name="searchManager" value="searchManager"/>
     </component>
-    <component name="decoderLivingroom" type="edu.cmu.sphinx.decoder.Decoder">
-    	<property name="searchManager" value="searchManagerLivingroom"></property></component>
-    <component name="decoderBedroom" type="edu.cmu.sphinx.decoder.Decoder">
-    	<property name="searchManager" value="searchManagerBedroom"></property></component>
 
-    <component name="searchManagerKitchen"
+    <component name="searchManager"
         type="edu.cmu.sphinx.decoder.search.SimpleBreadthFirstSearchManager">
         <property name="logMath" value="logMath"/>
-        <property name="linguist" value="flatLinguistKitchen"/>
+        <property name="linguist" value="flatLinguist"/>
         <property name="pruner" value="trivialPruner"/>
         <property name="scorer" value="threadedScorer"/>
         <property name="activeListFactory" value="activeList"/>
     </component>
-    <component name="searchManagerLivingroom" type="edu.cmu.sphinx.decoder.search.SimpleBreadthFirstSearchManager">
-    	<property name="logMath" value="logMath"></property>
-    	<property name="linguist" value="flatLinguistLivingroom"></property>
-    	<property name="pruner" value="trivialPruner"></property>
-    	<property name="scorer" value="threadedScorer"></property>
-    	<property name="activeListFactory" value="activeList"></property></component>
-    <component name="searchManagerBedroom" type="edu.cmu.sphinx.decoder.search.SimpleBreadthFirstSearchManager">
-    	<property name="logMath" value="logMath"></property>
-    	<property name="linguist" value="flatLinguistBedroom"></property>
-    	<property name="pruner" value="trivialPruner"></property>
-    	<property name="scorer" value="threadedScorer"></property>
-    	<property name="activeListFactory" value="activeList"></property></component>
 
 
     <component name="activeList"
@@ -106,30 +76,15 @@
     <!-- The linguist  configuration                              -->
     <!-- ******************************************************** -->
 
-    <component name="flatLinguistKitchen"
+    <component name="flatLinguist"
                 type="edu.cmu.sphinx.linguist.flat.FlatLinguist">
         <property name="logMath" value="logMath"/>
-        <property name="grammar" value="grammarKitchen"/>
+        <property name="grammar" value="jsgfGrammar"/>
         <property name="acousticModel" value="wsj"/>
         <property name="wordInsertionProbability"
                 value="${wordInsertionProbability}"/>
         <property name="languageWeight" value="${languageWeight}"/>
         <property name="unitManager" value="unitManager"/>
-    </component>
-    <component name="flatLinguistLivingroom" type="edu.cmu.sphinx.linguist.flat.FlatLinguist">
-    	<property name="logMath" value="logMath"></property>
-    	<property name="grammar" value="grammarLivingroom"></property>
-    	<property name="acousticModel" value="wsj"></property>
-    	<property name="wordInsertionProbability" value="${wordInsertionProbability}"></property>
-    	<property name="languageWeight" value="${languageWeight}"></property>
-    	<property name="unitManager" value="unitManager"></property></component>
-    <component name="flatLinguistBedroom" type="edu.cmu.sphinx.linguist.flat.FlatLinguist">
-    	<property name="logMath" value="logMath"></property>
-    	<property name="grammar" value="grammarBedroom"></property>
-    	<property name="acousticModel" value="wsj"></property>
-    	<property name="wordInsertionProbability" value="${wordInsertionProbability}"></property>
-    	<property name="languageWeight" value="${languageWeight}"></property>
-    	<property name="unitManager" value="unitManager"></property>
     </component>
 
 
@@ -137,23 +92,12 @@
     <!-- The Grammar  configuration                               -->
     <!-- ******************************************************** -->
 
-    <component name="grammarKitchen" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
+    <component name="jsgfGrammar" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
         <property name="dictionary" value="dictionary"/>
         <property name="grammarLocation"
              value="resource:/game/"/>
-        <property name="grammarName" value="kitchen"/>
+        <property name="grammarName" value="hello"/>
 	<property name="logMath" value="logMath"/>
-    </component>
-    <component name="grammarLivingroom" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
-    	<property name="dictionary" value="dictionary"></property>
-    	<property name="grammarLocation" value="resource:/game/"></property>
-    	<property name="grammarName" value="livingroom"></property>
-    	<property name="logMath" value="logMath"></property></component>
-    <component name="grammarBedroom" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
-    	<property name="dictionary" value="dictionary"></property>
-    	<property name="grammarLocation" value="resource:/game/"></property>
-    	<property name="grammarName" value="bedroom"></property>
-    	<property name="logMath" value="logMath"></property>
     </component>
 
 
@@ -290,21 +234,21 @@
 
     <component name="accuracyTracker"
                 type="edu.cmu.sphinx.instrumentation.BestPathAccuracyTracker">
-        <property name="recognizer" value="recKitchen"/>
+        <property name="recognizer" value="${recognizer}"/>
         <property name="showAlignedResults" value="false"/>
         <property name="showRawResults" value="false"/>
     </component>
 
     <component name="memoryTracker"
                 type="edu.cmu.sphinx.instrumentation.MemoryTracker">
-        <property name="recognizer" value="recKitchen"/>
+        <property name="recognizer" value="${recognizer}"/>
 	<property name="showSummary" value="false"/>
 	<property name="showDetails" value="false"/>
     </component>
 
     <component name="speedTracker"
                 type="edu.cmu.sphinx.instrumentation.SpeedTracker">
-        <property name="recognizer" value="recKitchen"/>
+        <property name="recognizer" value="${recognizer}"/>
         <property name="frontend" value="${frontend}"/>
 	<property name="showSummary" value="true"/>
 	<property name="showDetails" value="false"/>

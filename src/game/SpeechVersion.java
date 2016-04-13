@@ -36,16 +36,21 @@ public class SpeechVersion {
 	}
 
 	public void run() throws IOException, InterruptedException {
-		Recognizer recognizer = (Recognizer) cm.lookup("recognizer");
-		recognizer.allocate();
+		Recognizer recKitchen = (Recognizer) cm.lookup("recKitchen");
+		Recognizer recLivingroom = (Recognizer) cm.lookup("recLivingroom");
+		Recognizer recBedroom = (Recognizer) cm.lookup("recBedroom");
 
 		// start the microphone or exit if the program if this is not possible
 		Microphone microphone = (Microphone) cm.lookup("microphone");
 		if (!microphone.startRecording()) {
 			System.out.println("Cannot start microphone.");
-			recognizer.deallocate();
+			recKitchen.deallocate();
 			System.exit(1);
 		}
+
+		recKitchen.allocate();
+		recLivingroom.allocate();
+		recBedroom.allocate();
 
 		List<String> lines = new ArrayList<String>();
 		Date date = new Date();
@@ -55,14 +60,27 @@ public class SpeechVersion {
 
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
 		System.out.println("INSTRUCTIONS:\n" + world.getInst() + "\n");
-		
+
 		System.out.println("Type \"start\" when ready to play!");
 		String s = scan.nextLine();
 
+		Result result;
+		Recognizer currentRec = null;
+		
 		// This runs until you have eaten all 3 crackers!
 		while (bunny.getCrackers() < 3) {
 			System.out.print("@" + bunny.getCurrentRoom().getName() + ": ");
-			Result result = recognizer.recognize();
+			String room = bunny.getCurrentRoom().getName();
+			if (room.equals("kitchen")) {
+				currentRec = recKitchen;
+			} else if (room.equals("livingroom")) {
+				currentRec = recLivingroom;
+			} else if (room.equals("bedroom")) {
+				currentRec = recBedroom;
+			}
+			
+			result = currentRec.recognize();
+			
 			if (result == null) {
 				System.out.println("Speak more clearly.");
 				continue;
@@ -76,7 +94,7 @@ public class SpeechVersion {
 			if (com.contains("quit") || com.contains("exit")) {
 				System.out.println("Do you want to quit playing? [yes/no]");
 				System.out.print("Answer: ");
-				Result res = recognizer.recognize();
+				Result res = currentRec.recognize();
 				String ans = res.getBestFinalResultNoFiller();
 				ans.toLowerCase();
 				System.out.println(ans);
