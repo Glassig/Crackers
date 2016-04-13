@@ -4,7 +4,7 @@ grammar other;
 
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
 public <noun> = (<items> | <rooms> );
-public <cmd> = (exit | quit | look around | items | inventory | help | yes | no);
+public <cmd> = (exit | look around | items | inventory | help | yes | no);
 public <con> =  [ at | to | onto ];
 public <det> = [ my | that | this | the ];
 
@@ -14,13 +14,13 @@ public <take> = (grab | take);
 
 public <eat> = (bite | consume | eat | swallow);
 
-public <look> = ( check | examine | inspect | look | observe | read | search | study | view | watch | open | unlock );
+public <look> = (check | examine | inspect | look | observe | read | search | study | view | watch | open | unlock);
 
-public <use> = ( give | throw | use );
+public <use> = (give | throw | use);
 
-public <items> = (cracker | table | box | cat | toy | trash | letter | depository );
+public <items> = (cracker | table | box | cat | toy | trash | letter | depository);
 
-public <rooms> = livingroom | bedroom | kitchen;
+public <rooms> = (livingroom | bedroom | kitchen);
 
 public <kitchen> = ( cracker | table | box );
 public <livingroom> = ( cracker | cat | toy );

@@ -1,0 +1,21 @@
+examine kitchen
+jump onto box
+jump onto table
+exit
+consume cracker
+go livingroom
+
+search livingroom
+take toy
+use toy
+consume cracker
+grab bedroom
+no
+go bedroom
+examine bedroom
+examine cat
+examine trash
+read letter
+examine depository
+consume cracker
+Number of commands: 20

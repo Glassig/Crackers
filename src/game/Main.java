@@ -97,6 +97,7 @@ public class Main {
 				+ "   *   \"help\" tells you these instructions\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
 				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
+				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"
 				+ "Available rooms: kitchen, livingroom and bedroom\n";
 
 		world = new World(plot, instructions);
@@ -170,10 +171,11 @@ public class Main {
 				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
 				+ "Try typing as if you were talking to any human.\n"
 				+ "Some useful commands: \n"
-				+ "   *   \"quit\" or \"exit\" quits the game\n"
-				+ "   *   \"help\" tells you these instructions\n\n"
+				+ "   *   \"exit\" to exit the game\n"
+				+ "   *   \"help\" give you these instructions\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
 				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
+				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"
 				+ "Available rooms: classroom, cafeteria and corridor\n";
 
 		world = new World(plot, instructions);
