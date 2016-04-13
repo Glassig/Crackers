@@ -136,7 +136,7 @@ public class Parser {
 					for (Item dep : item.getViewDependables()) {
 						if (item.getName().equals("backpack") && dep.getName().equals("cracker") && !item.getStatus()) {
 							// do nothing
-						} else if (item.getName().equals("vault") && dep.getName().equals("cracker")
+						} else if (item.getName().equals("depository") && dep.getName().equals("cracker")
 								&& !item.getStatus()) {
 							// do nothing
 						} else {

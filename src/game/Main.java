@@ -12,7 +12,7 @@ public class Main {
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		System.out.println("\n*~ Welcome to Crackers! ~*\n" + "Which version do you want to play? [text/speech]\n");
 
@@ -34,7 +34,7 @@ public class Main {
 	}
 
 	/*
-	 * Creates the appartment game world
+	 * Creates the apartment game world
 	 */
 	public static void createApartment() {
 		// KITCHEN
@@ -54,7 +54,7 @@ public class Main {
 		// LIVINGROOM
 		Room livingroom = new Room("livingroom", "It's a livingroom! You get a cozy feeling.");
 		Item livingroomCracker = new Item("cracker", "eat", "There's a cracker laying on the floor!",
-				"There's a cracker laying on the floor right next to the cat. If only you could fet rid of that cat...",
+				"There's a cracker laying on the floor right next to the cat. If only you could get rid of that cat...",
 				false, true);
 		Item cat = new Item("cat", "", "The cat is gone!",
 				"A scary looking cat is laying on the floor. Better stay away.", false, true);
@@ -68,10 +68,10 @@ public class Main {
 		Room bedroom = new Room("bedroom", "It's a bedroom! You feel a bit sleepy.");
 		Item bedroomCracker = new Item("cracker", "eat", "There's a cracker laying in the safe!!",
 				"There's a cracker somewhere in this room...", false, false);
-		Item trash = new Item("trashcan", "", "A trash can, it's almost empty except for a small paper.", "", true,
+		Item trash = new Item("trash", "", "A trash can, it's almost empty except for a small paper.", "", true,
 				true);
-		Item vault = new Item("vault", "", "The vault is open, and there's a cracker in it!",
-				"A vault, but it's locked with a 4-digit code.", false, true);
+		Item vault = new Item("depository", "", "The depository is open, and there's a cracker in it!",
+				"A depository, but it's locked with a 4-digit code.", false, true);
 		Item paper = new Item("paper", "", "A paper with the number 1475 written on it.", "", true, false);
 		// paper.addUsable(vault);
 		vault.addDependable(bedroomCracker);
@@ -84,19 +84,20 @@ public class Main {
 
 		bunny = new Player(kitchen);
 
-		// Create the appartment world
+		// Create the apartment world
 		String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the apartment to still your hunger!";
-		String instructions = "Speak commands in order to progress. Commands to help you along consist: \n" 
-				+ "   *   \"items\" or \"inventory\" will tell you what you are carrying \n"
-				+ "   *   \"look around\" tells you about your surrounding.\n"
-				+ "   *   \"quit\" or \"exit\" quits the game"
-				+ "   *   \"help\" tells you these instructions AND OH MY GAAAWD IT'S AN INFINITE LOOP OF HELPS!!!.\n"
-				+ "Moving on. Your goal is to get all three crackers.\n"
-				+ "Commands mostly follow the structure of <verb> <noun> with voluntary determiners and conjunctions inbetween. Try it out!\n"
-				+ "Available rooms in this game: kitchen, livingroom and bedroom\n";
-;
+		
+		String instructions = "Speak commands in order to progress.\n"
+				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
+				+ "Try speaking as if you were talking to any human.\n"
+				+ "Some useful commands: \n"
+				+ "   *   \"quit\" or \"exit\" quits the game\n"
+				+ "   *   \"help\" tells you these instructions\n\n"
+				+ "Your goal is to find and eat all three crackers.\n"
+				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
+				+ "Available rooms: kitchen, livingroom and bedroom\n";
 
 		world = new World(plot, instructions);
 		world.addRoom(kitchen);
@@ -164,14 +165,16 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the school to still your hunger!";
-		String instructions = "Type commands in order to progress. Commands to help you along consist: \n" 
-				+ "   *   \"items\" or \"inventory\" will tell you what you are carrying \n"
-				+ "   *   \"look around\" tells you about your surrounding.\n"
-				+ "   *   \"quit\" or \"exit\" quits the game"
-				+ "   *   \"help\" tells you these instructions AND OH MY GAAAWD IT'S AN INFINITE LOOP OF HELPS!!!.\n"
-				+ "Moving on. Your goal is to get all three crackers.\n"
-				+ "Commands mostly follow the structure of <verb> <noun> with voluntary determiners and conjunctions inbetween. Try it out!\n"
-				+ "Available rooms in this game: classroom, corridor and classroom\n";
+		
+		String instructions = "Type commands in order to progress.\n"
+				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
+				+ "Try typing as if you were talking to any human.\n"
+				+ "Some useful commands: \n"
+				+ "   *   \"quit\" or \"exit\" quits the game\n"
+				+ "   *   \"help\" tells you these instructions\n\n"
+				+ "Your goal is to find and eat all three crackers.\n"
+				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
+				+ "Available rooms: classroom, cafeteria and corridor\n";
 
 		world = new World(plot, instructions);
 		world.addRoom(cafeteria);

@@ -1,0 +1,61 @@
+
+help
+look around
+grab paper
+jump vault
+go box
+go table
+grab cracker
+eat cracker
+go bedroom
+
+go at an kitchen
+go note
+look around
+enter note
+items
+go bedroom
+
+enter note
+enter note
+look around
+get trash
+get trash
+get trash
+examine to trash
+go note
+look around
+take bedroom
+look at paper
+get vault
+check vault
+help
+look vault
+look around
+pick cracker
+grab paper
+check cracker
+eat to cracker
+help
+go livingroom
+go note
+look around
+grab paper
+take cracker
+take cracker
+take cracker
+take cracker
+take trash can
+take cracker
+check cracker
+look around
+take toy
+get to toy
+go a toy
+look vault
+look vault
+look toy
+help
+use toy
+eat cracker
+Number of commands: 60

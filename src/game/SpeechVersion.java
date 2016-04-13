@@ -1,6 +1,7 @@
 package game;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class SpeechVersion {
 
 	private World world;
 	private Player bunny;
+	private Scanner scan;
 	private POSTagger tagger;
 	private Synonyms synonyms;
 	private Parser parser;
@@ -26,13 +28,14 @@ public class SpeechVersion {
 	public SpeechVersion(World world, Player player) {
 		this.world = world;
 		this.bunny = player;
+		scan = new Scanner(System.in);
 		tagger = new POSTagger("models/english-left3words-distsim.tagger");
 		synonyms = new Synonyms();
 		parser = new Parser();
 		cm = new ConfigurationManager(SpeechVersion.class.getResource("helloworld.config.xml"));
 	}
 
-	public void run() throws IOException {
+	public void run() throws IOException, InterruptedException {
 		Recognizer recognizer = (Recognizer) cm.lookup("recognizer");
 		recognizer.allocate();
 
@@ -52,6 +55,9 @@ public class SpeechVersion {
 
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
 		System.out.println("INSTRUCTIONS:\n" + world.getInst() + "\n");
+		
+		System.out.println("Type \"start\" when ready to play!");
+		String s = scan.nextLine();
 
 		// This runs until you have eaten all 3 crackers!
 		while (bunny.getCrackers() < 3) {
