@@ -151,7 +151,7 @@ public class Parser {
 						System.out.println(item.getDescriptionFalse() + "\n");
 					}
 					// special case
-					if (noun.equals("vault") && !item.getStatus()) {
+					if (noun.equals("depository") && !item.getStatus()) {
 						System.out.print("Enter code (use keyboard): ");
 						String code = scan.nextLine();
 						if (code.equals("1475") || code.equals("one four seven five")) {

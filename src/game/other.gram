@@ -18,6 +18,6 @@ public <look> = ( check | examine | inspect | look | observe | read | search | s
 
 public <use> = ( give | throw | use );
 
-public <items> = (cracker | table | box | cat | toy | trash | trash can | paper | depository );
+public <items> = (cracker | table | box | cat | toy | trash | letter | depository );
 
 public <rooms> = livingroom | bedroom | kitchen;
