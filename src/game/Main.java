@@ -68,8 +68,7 @@ public class Main {
 		Room bedroom = new Room("bedroom", "It's a bedroom! You feel a bit sleepy.");
 		Item bedroomCracker = new Item("cracker", "eat", "There's a cracker laying in the safe!!",
 				"There's a cracker somewhere in this room...", false, false);
-		Item trash = new Item("trash", "", "A trash can, it's almost empty except for a letter.", "", true,
-				true);
+		Item trash = new Item("trash", "", "A trash can, it's almost empty except for a letter.", "", true, true);
 		Item vault = new Item("depository", "", "The depository is open, and there's a cracker in it!",
 				"A depository, but it's locked with a 4-digit code.", false, true);
 		Item paper = new Item("letter", "", "A letter with the number 1475 written on it.", "", true, false);
@@ -88,13 +87,13 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the apartment to still your hunger!";
-		
+
 		String instructions = "Speak commands in order to progress.\n"
 				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
-				+ "Try speaking as if you were talking to any human.\n"
-				+ "Some useful commands: \n"
-				+ "   *   \"quit\" to quit the game\n"
-				+ "   *   \"help\" tells you these instructions\n\n"
+				+ "Try speaking as if you were talking to any human.\n" + "Some useful commands: \n"
+				+ "   *   \"search room\" to get information about the room you're in\n"
+				+ "   *   \"help\" give you these instructions\n" 
+				+ "   *   \"quit\" to quit the game\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
 				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
 				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"
@@ -166,13 +165,13 @@ public class Main {
 		String plot = "You are a small pet bunny who has escaped your cage in the classroom, and you happen to be very hungry.\n"
 				+ "You have the munchies for crackers.\n"
 				+ "Find all three crackers in the school to still your hunger!";
-		
+
 		String instructions = "Type commands in order to progress.\n"
 				+ "Commands mostly follow the structure of <verb> <noun> with optional determiners and conjunctions inbetween.\n"
-				+ "Try typing as if you were talking to any human.\n"
-				+ "Some useful commands: \n"
-				+ "   *   \"quit\" to quit the game\n"
-				+ "   *   \"help\" give you these instructions\n\n"
+				+ "Try typing as if you were talking to any human.\n" + "Some useful commands: \n"
+				+ "   *   \"search room\" to get information about the room you're in\n"
+				+ "   *   \"help\" give you these instructions\n" 
+				+ "   *   \"quit\" to quit the game\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
 				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
 				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"

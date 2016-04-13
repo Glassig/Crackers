@@ -1,0 +1,5 @@
+bajs
+look around
+quit
+Time: 0m 11s
+Number of commands: 3

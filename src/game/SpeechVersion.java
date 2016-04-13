@@ -47,19 +47,23 @@ public class SpeechVersion {
 			recKitchen.deallocate();
 			System.exit(1);
 		}
-		
+
 		System.out.println("Allocating kitchen recognizer...");
 		recKitchen.allocate();
 		System.out.println("Allocating livingroom recognizer...");
 		recLivingroom.allocate();
 		System.out.println("Allocating bedroom recognizer...");
 		recBedroom.allocate();
-		System.out.println("Done!");
+		System.out.println("Done!\n");
 
+		System.out.println("What is your name?");
+		System.out.print("Name (use keyboard): ");
+		String name = scan.nextLine();
+		
 		List<String> lines = new ArrayList<String>();
 		Date date = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat("yyyy.MM.dd_HH:mm:ss");
-		String filename = "speechlog/" + ft.format(date) + ".txt";
+		String filename = "speechlog/" + ft.format(date) + "-" + name + ".txt";
 		Path file = Paths.get(filename);
 
 		System.out.println("\nPLOT:\n" + world.getPlot() + "\n");
@@ -70,7 +74,8 @@ public class SpeechVersion {
 
 		Result result;
 		Recognizer currentRec = null;
-		
+
+		long startTime = date.getTime();
 		// This runs until you have eaten all 3 crackers!
 		while (bunny.getCrackers() < 3) {
 			System.out.print("@" + bunny.getCurrentRoom().getName() + ": ");
@@ -82,9 +87,9 @@ public class SpeechVersion {
 			} else if (room.equals("bedroom")) {
 				currentRec = recBedroom;
 			}
-			
+
 			result = currentRec.recognize();
-			
+
 			if (result == null) {
 				System.out.println("Speak more clearly.");
 				continue;
@@ -102,11 +107,13 @@ public class SpeechVersion {
 				String ans = res.getBestFinalResultNoFiller();
 				ans.toLowerCase();
 				System.out.println(ans);
+
 				if (ans.equals("no")) {
 					System.out.println(); // newline
 					continue;
 				} else if (ans.equals("yes")) {
 					System.out.println("Aww okay, bye! :D");
+					lines.add(playtime(startTime));
 					writeToFile(lines, file);
 					System.exit(0);
 				} else {
@@ -161,8 +168,10 @@ public class SpeechVersion {
 		}
 
 		// victory!
-		System.out.println("Victory! You are no longer hungry.\n" + "You completed the game using "
-				+ bunny.getCommandCount() + " commands. \n" + "Thank you for playing! <3\n");
+		String time = playtime(startTime);
+		System.out.println("Victory! You are no longer hungry.\n" + "Commands used: " + bunny.getCommandCount() + "\n"
+				+ time + "\n" + "Thank you for playing! <3\n");
+		lines.add(playtime(startTime));
 		writeToFile(lines, file);
 		System.exit(0);
 	}
@@ -170,5 +179,15 @@ public class SpeechVersion {
 	public void writeToFile(List<String> lines, Path file) throws IOException {
 		lines.add("Number of commands: " + bunny.getCommandCount());
 		Files.write(file, lines, Charset.forName("UTF-8"));
+	}
+
+	public String playtime(long startTime) {
+		Date date2 = new Date();
+		long endTime = date2.getTime();
+		long totalTimeInSeconds2 = (endTime-startTime)/1000;
+		int totalTimeInSeconds = (int) ((endTime - startTime) / 1000);
+		int minutes = totalTimeInSeconds / 60;
+		int seconds = totalTimeInSeconds - minutes * 60;
+		return "Time: " + minutes + "m " + seconds + "s";
 	}
 }

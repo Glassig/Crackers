@@ -1,2 +1,3 @@
 quit
+Time: 0m 0s
 Number of commands: 1

@@ -1,3 +1,0 @@
-enter
-quit
-Number of commands: 2

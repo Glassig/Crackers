@@ -4,23 +4,23 @@ grammar other;
 
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
 public <noun> = (<items> | <rooms>);
-public <cmd> = (quit | look around | items | inventory | help | yes | no);
+public <cmd> = (quit | items | inventory | help | yes | no);
 public <con> =  [ at | to | onto ];
 public <det> = [ my | that | this | the ];
 
 public <go> = (go | jump);
 
-public <take> = (grab | take);
+public <take> = (grab | take | get);
 
 public <eat> = (bite | consume | eat | swallow);
 
-public <look> = (check | examine | inspect | look | observe | read | search | study | view | watch | open | unlock);
+public <look> = (check | examine | inspect | observe | read | search | study | view | watch | open | unlock);
 
 public <use> = (give | throw | use);
 
 public <items> = (cracker | table | box | cat | toy | trash | letter | depository);
 
-public <rooms> = (livingroom | bedroom | kitchen);
+public <rooms> = (livingroom | bedroom | kitchen | room);
 
 public <kitchenitems> = ( cracker | table | box );
 public <kitchenlook> = (check | examine | inspect | look | observe | search | study | view | watch);
