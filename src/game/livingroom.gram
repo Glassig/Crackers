@@ -1,0 +1,13 @@
+#JSGF V1.0;
+
+grammar livingroom;
+
+import <other.verb>;
+import <other.rooms>;
+import <other.cmd>;
+import <other.con>;
+import <other.det>;
+import <other.livingroom>
+import <other.rooms>
+
+public <input> = <verb> <con> <det> ( <livingroom> | <rooms> ) | <cmd>;
