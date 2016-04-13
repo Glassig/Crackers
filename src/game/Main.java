@@ -12,7 +12,7 @@ public class Main {
 	private static World world;
 	private static Scanner scan = new Scanner(System.in);
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		System.out.println("\n*~ Welcome to Crackers! ~*\n" + "Which version do you want to play? [text/speech]\n");
 
@@ -70,8 +70,8 @@ public class Main {
 				"There's a cracker somewhere in this room...", false, false);
 		Item trash = new Item("trash", "", "A trash can, it's almost empty except for a small paper.", "", true,
 				true);
-		Item vault = new Item("vault", "", "The vault is open, and there's a cracker in it!",
-				"A vault, but it's locked with a 4-digit code.", false, true);
+		Item vault = new Item("depository", "", "The depository is open, and there's a cracker in it!",
+				"A depository, but it's locked with a 4-digit code.", false, true);
 		Item paper = new Item("paper", "", "A paper with the number 1475 written on it.", "", true, false);
 		// paper.addUsable(vault);
 		vault.addDependable(bedroomCracker);

@@ -8,9 +8,9 @@ public <cmd> = (exit | quit | look around | items | inventory | help | yes | no)
 public <con> =  [ at | to | onto ];
 public <det> = [ my | that | this | the ];
 
-public <go> = (enter | go | jump | move | run | walk);
+public <go> = (go | jump);
 
-public <take> = (get | grab | pick | take);
+public <take> = (grab | take);
 
 public <eat> = (bite | consume | eat | swallow);
 
@@ -18,6 +18,6 @@ public <look> = ( check | examine | inspect | look | observe | read | search | s
 
 public <use> = ( give | throw | use );
 
-public <items> = (cracker | table | box | cat | toy | trash | trash can | paper | vault );
+public <items> = (cracker | table | box | cat | toy | trash | trash can | paper | depository );
 
 public <rooms> = livingroom | bedroom | kitchen;

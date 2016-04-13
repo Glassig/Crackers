@@ -1,0 +1,133 @@
+no
+help
+
+enter onto kitchen
+look around
+get cracker
+get cracker
+go onto cracker
+exit
+eat cracker
+view to the cracker
+get that vault
+go the vault
+go that vault
+jump that box
+
+go to that livingroom
+view onto the kitchen
+go at that kitchen
+
+go the vault
+walk vault
+run vault
+enter onto vault
+consume that cat
+jump onto vault
+quit
+no
+go that vault
+pick onto that vault
+help
+unlock to that vault
+
+get vault
+get at vault
+grab vault
+
+go trash
+look around
+pick trash can
+examine cracker
+grab cat
+pick cracker
+look at that cracker
+take vault
+check to table
+exit
+get onto that trash
+
+
+grab vault
+
+pick kitchen
+items
+go kitchen
+grab kitchen
+
+look around
+eat to cracker
+jump onto box
+jump onto table
+get cracker
+eat the cracker
+grab cat
+grab the kitchen
+check kitchen
+look to that kitchen
+move to that livingroom
+give at table
+quit
+examine livingroom
+study cracker
+study cat
+examine toy
+inventory
+take the toy
+inventory
+items
+swallow at paper
+
+throw at kitchen
+take that toy
+examine toy
+examine cat
+
+look at the cat
+
+enter the toy
+throw toy
+eat to cracker
+go to the bedroom
+grab vault
+
+look bedroom
+grab toy
+go at kitchen
+look around
+run paper
+go to that cat
+go to the bedroom
+grab vault
+look around
+inspect trash can
+take cracker
+
+take paper
+take cracker
+take toy
+
+read that bedroom
+read that paper
+look that paper
+enter that bedroom
+look to that paper
+look paper
+take paper
+
+check paper
+
+walk that kitchen
+unlock cat
+items
+go bedroom
+eat cracker
+enter vault
+enter to box
+look at the vault
+check toy
+
+
+get cracker
+eat cracker
+Number of commands: 132
