@@ -59,23 +59,27 @@ public class Parser {
 			break;
 
 		case "take":
-			boolean found = false;
-			for (Item item : player.getCurrentRoom().getItems()) {
-				if (item.getName().equals(noun)) {
-					found = true;
-					if (item.getStatus() && item.getType().equals("take")) {
-						item.setType("use");
-						player.addItemToInv(item);
-						player.getCurrentRoom().removeItem(item);
-						System.out.println("You picked up the " + noun + " and put it in your inventory.\n");
-					} else {
-						System.out.println("You can't pick that up.\n");
+			if(noun.equals("cracker")) {
+				parse(player, world, "eat", "cracker");
+			} else {
+				boolean found = false;
+				for (Item item : player.getCurrentRoom().getItems()) {
+					if (item.getName().equals(noun)) {
+						found = true;
+						if (item.getStatus() && item.getType().equals("take")) {
+							item.setType("use");
+							player.addItemToInv(item);
+							player.getCurrentRoom().removeItem(item);
+							System.out.println("You picked up the " + noun + " and put it in your inventory.\n");
+						} else {
+							System.out.println("You can't pick that up.\n");
+						}
+						break;
 					}
-					break;
 				}
-			}
-			if (!found) {
-				System.out.println("There is no " + noun + " in this room.\n");
+				if (!found) {
+					System.out.println("There is no " + noun + " in this room.\n");
+				}
 			}
 			break;
 
