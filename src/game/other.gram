@@ -21,3 +21,7 @@ public <use> = ( give | throw | use );
 public <items> = (cracker | table | box | cat | toy | trash | letter | depository );
 
 public <rooms> = livingroom | bedroom | kitchen;
+
+public <kitchen> = ( cracker | table | box );
+public <livingroom> = ( cracker | cat | toy );
+public <bedroom> = ( cracker | letter | trash | depository );
