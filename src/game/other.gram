@@ -3,8 +3,8 @@
 grammar other;
 
 public <verb> =(<go> | <take> | <eat> | <look> | <use>);
-public <noun> = (<items> | <rooms> );
-public <cmd> = (exit | look around | items | inventory | help | yes | no);
+public <noun> = (<items> | <rooms>);
+public <cmd> = (quit | look around | items | inventory | help | yes | no);
 public <con> =  [ at | to | onto ];
 public <det> = [ my | that | this | the ];
 
@@ -22,6 +22,15 @@ public <items> = (cracker | table | box | cat | toy | trash | letter | depositor
 
 public <rooms> = (livingroom | bedroom | kitchen);
 
-public <kitchen> = ( cracker | table | box );
-public <livingroom> = ( cracker | cat | toy );
-public <bedroom> = ( cracker | letter | trash | depository );
+public <kitchenitems> = ( cracker | table | box );
+public <kitchenlook> = (check | examine | inspect | look | observe | search | study | view | watch);
+public <kitchenverb> =(<go> | <take> | <eat> | <kitchenlook>);
+
+public <livingroomitems> = ( cracker | cat | toy );
+public <livingroomgo> = (go);
+public <livingroomlook> = (check | examine | inspect | look | observe | search | study | view | watch);
+public <livingroomverb> =(<livingroomgo> | <take> | <eat> | <livingroomlook> | <use>);
+
+public <bedroomitems> = ( cracker | letter | trash | depository );
+public <bedroomgo> = (go);
+public <bedroomverb> =(<bedroomgo> | <take> | <eat> | <look>);

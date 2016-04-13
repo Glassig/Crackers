@@ -2,12 +2,11 @@
 
 grammar bedroom;
 
-import <other.verb>;
+import <other.bedroomverb>;
 import <other.rooms>;
 import <other.cmd>;
 import <other.con>;
 import <other.det>;
-import <other.bedroom>
-import <other.rooms>
+import <other.bedroomitems>;
 
-public <input> = <verb> <con> <det> ( <bedroom> | <rooms> ) | <cmd>;
+public <input> = <bedroomverb> <con> <det> ( <bedroomitems> | <rooms> ) | <cmd>;

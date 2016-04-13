@@ -47,10 +47,14 @@ public class SpeechVersion {
 			recKitchen.deallocate();
 			System.exit(1);
 		}
-
+		
+		System.out.println("Allocating kitchen recognizer...");
 		recKitchen.allocate();
+		System.out.println("Allocating livingroom recognizer...");
 		recLivingroom.allocate();
+		System.out.println("Allocating bedroom recognizer...");
 		recBedroom.allocate();
+		System.out.println("Done!");
 
 		List<String> lines = new ArrayList<String>();
 		Date date = new Date();

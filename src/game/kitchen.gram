@@ -2,12 +2,11 @@
 
 grammar kitchen;
 
-import <other.verb>;
+import <other.kitchenverb>;
 import <other.rooms>;
 import <other.cmd>;
 import <other.con>;
 import <other.det>;
-import <other.kitchen>
-import <other.rooms>
+import <other.kitchenitems>;
 
-public <input> = <verb> <con> <det> ( <kitchen> | <rooms> ) | <cmd>;
+public <input> = <kitchenverb> <con> <det> ( <kitchenitems> | <rooms> ) | <cmd>;
