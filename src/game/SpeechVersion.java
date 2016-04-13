@@ -140,7 +140,7 @@ public class SpeechVersion {
 
 		// victory!
 		System.out.println("Victory! You are no longer hungry.\n" + "You completed the game using "
-				+ bunny.getCommandCount() + "commands. \n" + "Thank you for playing! <3\n");
+				+ bunny.getCommandCount() + " commands. \n" + "Thank you for playing! <3\n");
 		writeToFile(lines, file);
 		System.exit(0);
 	}
