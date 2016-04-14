@@ -1,0 +1,39 @@
+search the roon
+search the room
+open the backpack
+search the desk
+pick up the key
+open the backpack
+unlock backpack
+open the padlock
+open the backpack with the key
+use key on backpack
+open backpack
+open the backpack
+eat cracker
+search room
+help
+go to cafeteria
+search room
+pick up the coin
+search machine
+put coin in the machine
+purchase cracker
+buy the cracker
+use the machine
+use the coin on the machine
+buy cracker
+buy cracker from machine
+search machine
+eat cracker
+help
+go to corridor
+search corridor
+look at poster
+go to locker 222
+go to locker222
+open locker222
+open the locker222
+eat cracker
+Time: 5m 29s
+Number of commands: 37

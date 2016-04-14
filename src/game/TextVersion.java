@@ -139,7 +139,6 @@ public class TextVersion {
 	public String playtime(long startTime) {
 		Date date2 = new Date();
 		long endTime = date2.getTime();
-		long totalTimeInSeconds2 = (endTime-startTime)/1000;
 		int totalTimeInSeconds = (int) ((endTime - startTime) / 1000);
 		int minutes = totalTimeInSeconds / 60;
 		int seconds = totalTimeInSeconds - minutes * 60;

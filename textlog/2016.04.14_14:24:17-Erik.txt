@@ -1,0 +1,28 @@
+look around the romm
+look around the room
+examine the backpack
+examine the desk
+take the key
+unlcok the backpack
+unlock the backpack
+use the key on the backpack
+search the backpack
+take cracker
+look around the room
+waht are the exits7
+help
+go to the cafeteria
+look around
+take the coin
+examine the machine
+use the coin on the machine
+search the machine
+eat the cracker
+go to the corridor
+look around the corridor
+look at the poster
+go to locker 222
+search locker222
+eat the cracker in locker222
+Time: 5m 4s
+Number of commands: 26

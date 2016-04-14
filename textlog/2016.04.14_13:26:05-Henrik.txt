@@ -1,0 +1,26 @@
+go to classroom
+study classroom
+study desk
+take key
+study backpack
+use key
+open backpack
+study backpack
+take cracker
+help
+go to cafeteria
+study cafeteria
+take coin
+study machine
+use coin
+study machine
+eat cracker
+go to corridor
+study corridor
+study poster
+study lockers
+study locker222
+eat creacker
+eat cracker
+Time: 3m 0s
+Number of commands: 24

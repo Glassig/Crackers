@@ -95,9 +95,9 @@ public class Main {
 				+ "   *   \"help\" give you these instructions\n" 
 				+ "   *   \"quit\" to quit the game\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
-				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
-				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"
-				+ "Available rooms: kitchen, livingroom and bedroom\n";
+				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n\n"
+				+ "SYNONYMS ARE YOUR FRIEND!!\n\n"
+				+ "Available rooms: kitchen, livingroom and bedroom";
 
 		world = new World(plot, instructions);
 		world.addRoom(kitchen);
@@ -173,9 +173,9 @@ public class Main {
 				+ "   *   \"help\" give you these instructions\n" 
 				+ "   *   \"quit\" to quit the game\n\n"
 				+ "Your goal is to find and eat all three crackers.\n"
-				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n"
-				+ "If you have trouble with your commands, try using synonyms for the words you want to use!\n\n"
-				+ "Available rooms: classroom, cafeteria and corridor\n";
+				+ "There is ONE CRACKER IN EACH ROOM and sometimes they are hidden somewhere, so be sure to look around carefully!\n\n"
+				+ "SYNONYMS ARE YOUR FRIEND!!\n\n"
+				+ "Available rooms: classroom, cafeteria and corridor";
 
 		world = new World(plot, instructions);
 		world.addRoom(cafeteria);

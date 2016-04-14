@@ -1,0 +1,27 @@
+search room
+open backpack
+take backpack
+inspect desk
+take key
+open backpack
+use key
+open backpack
+open the backpack
+eat cracker
+go to cafeteria
+search the cafeteria
+take coin
+use coin
+open machine
+open the machine
+eat cracker
+go to cooridor
+got to corridor
+go to corridor
+search corridor
+look at poster
+open locker222
+check locker222
+eat cracker
+Time: 3m 8s
+Number of commands: 25

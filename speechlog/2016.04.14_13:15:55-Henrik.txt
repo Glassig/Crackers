@@ -1,0 +1,79 @@
+go room
+search room
+grab cracker
+items
+
+take cracker
+help
+
+get room
+get cracker
+study cracker
+items
+items
+go to table
+eat cracker
+look bedroom
+no
+
+study the room
+take that box
+study box
+jump box
+take kitchen
+check room
+no
+jump at my table
+examine this livingroom
+study cracker
+go cracker
+no
+take cracker
+get table
+help
+go livingroom
+take the room
+study the room
+examine this livingroom
+quit
+grab room
+take cracker
+study cracker
+go room
+
+take cracker
+take toy
+yes
+take cat
+examine cat
+inventory
+view that toy
+inventory
+swallow to cat
+
+quit
+yes
+use toy
+no
+go cracker
+get at my cracker
+help
+go to bedroom
+examine bedroom
+study trash
+no
+take kitchen
+take letter
+take trash
+eat onto letter
+examine depository
+read room
+study letter
+open to depository
+study depository
+
+quit
+study depository
+grab cracker
+Time: 8m 19s
+Number of commands: 77
