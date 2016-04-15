@@ -1,0 +1,37 @@
+search room
+go to backpack
+search backpack
+pick the padlock
+go to the desk
+hop on the desk
+search the desk
+pick up
+pick up the key
+ude key to open padlock on backpack
+use key to open padlock on backpack
+search the backpack
+pick up cracker
+go to cafeteria
+search the room
+search the coins
+search the coin
+pick up the coin
+play with the machine
+'hop onto the mashine
+kick the mashine
+kick the machine
+look at the machine
+put the coin in the machine
+get the cracker
+go to corridor
+look in all the lockers
+look in locker314
+look in locker011
+
+look in locker001
+search the room
+look at the poster
+look in locker222
+get the cracker
+Time: 9m 1s
+Number of commands: 35
