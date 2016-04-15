@@ -1,0 +1,19 @@
+look around
+search desk
+take key
+use the key
+search backpack
+eat cracker
+go to the cafeteria
+look around
+take the coin
+use the coin 
+search machine
+eat cracker
+go to the corridor
+look around
+check poster
+search the locker222
+take the cracker
+Time: 1m 43s
+Number of commands: 17
