@@ -1,17 +1,12 @@
 help
 check kitchen
-
 items
 yes
 items
 view box
 go room
 go room
-
-
 look that table
-
-
 look box
 check kitchen
 grab kitchen
@@ -21,13 +16,11 @@ get box
 check box
 get cracker
 look onto that box
-
 help
 jump box
 get onto that table
 get onto that kitchen
 get to table
-
 jump to table
 watch cracker
 get cracker
@@ -40,14 +33,12 @@ get room
 look this livingroom
 search room
 get onto toy
-
 yes
 check to livingroom
 no
 eat cracker
 yes
 study kitchen
-
 items
 check kitchen
 check cat
@@ -55,7 +46,6 @@ study at kitchen
 no
 quit
 go bedroom
-
 go room
 search room
 watch this room
@@ -68,7 +58,6 @@ get letter
 no
 open to trash
 no
-
 items
 read bedroom
 read letter
@@ -79,7 +68,6 @@ search depository
 search room
 get kitchen
 go depository
-
 search depository
 unlock to cracker
 get cracker
@@ -89,13 +77,10 @@ take at livingroom
 help
 check to livingroom
 consume livingroom
-
 swallow to room
 go the livingroom
-
-
 use toy
 grab kitchen
 grab cracker
 Time: 9m 11s
-Number of commands: 99
+Number of commands: 84

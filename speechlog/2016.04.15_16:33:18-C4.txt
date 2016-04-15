@@ -1,4 +1,3 @@
-
 items
 examine room
 bite at kitchen
@@ -12,7 +11,6 @@ grab kitchen
 grab kitchen
 grab cracker
 search to livingroom
-
 watch the table
 check that room
 eat at cracker
@@ -36,7 +34,6 @@ grab that kitchen
 watch that kitchen
 quit
 no
-
 search bedroom
 quit
 get kitchen
@@ -57,8 +54,7 @@ search depository
 help
 search bedroom
 view room
-
 search depository
 grab cracker
 Time: 5m 38s
-Number of commands: 62
+Number of commands: 58
