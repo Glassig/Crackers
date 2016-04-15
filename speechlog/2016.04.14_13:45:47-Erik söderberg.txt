@@ -1,4 +1,3 @@
-
 quit
 search kitchen
 grab cracker
@@ -16,19 +15,15 @@ get at cracker
 use at that cracker
 get at that cat
 view that cat
-
 quit
-
 inventory
 inspect that toy
 view toy
 quit
-
 quit
 no
 grab the toy
 view to the toy
-
 view to toy
 take toy
 go room
@@ -36,19 +31,14 @@ go at cat
 quit
 look toy
 inventory
-
-
 throw toy
 get cracker
 help
 go to the bedroom
-
 eat at that letter
 search bedroom
-
 grab kitchen
 unlock trash
-
 help
 get letter
 eat at the depository
@@ -58,7 +48,6 @@ get bedroom
 go room
 quit
 go that depository
-
 no
 get the room
 inspect depository
@@ -68,7 +57,6 @@ no
 bite cracker
 grab kitchen
 grab kitchen
-
 quit
 go to bedroom
 search bedroom
@@ -79,4 +67,4 @@ take depository
 inspect depository
 take cracker
 Time: 6m 41s
-Number of commands: 80
+Number of commands: 68

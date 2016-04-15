@@ -2,7 +2,6 @@ items
 items
 items
 get room
-
 get kitchen
 swallow room
 get kitchen
@@ -23,49 +22,39 @@ eat cracker
 get at livingroom
 go to the kitchen
 inspect room
-
 go to the table
 no
 go the bedroom
 unlock that bedroom
 inspect that room
 inspect room
-
-
 examine trash
 take cracker
 take cracker
 take bedroom
-
 get at cracker
 grab at letter
 go room
 read bedroom
 read that bedroom
-
 go the bedroom
 read kitchen
 items
 get livingroom
-
-
 read letter
 grab the depository
 grab the depository
 grab the depository
 yes
 search depository
-
 eat cracker
 go the kitchen
 go the kitchen
 go to the room
 go kitchen
 consume onto cracker
-
 go the livingroom
 quit
-
 items
 check the room
 eat cracker
@@ -73,15 +62,12 @@ go toy
 help
 take toy
 take kitchen
-
 yes
 yes
-
 inspect room
 quit
 yes
 no
-
 inspect cat
 throw that cat
 check that toy
@@ -89,11 +75,10 @@ go that toy
 throw that toy
 go room
 get kitchen
-
 go to this livingroom
 get cat
 check kitchen
 quit
 eat cracker
 Time: 8m 36s
-Number of commands: 97
+Number of commands: 82
