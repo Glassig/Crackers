@@ -1,13 +1,22 @@
+search classroom
+i would like to go towards the desk
+go to desk
+go desk
 look in backpack
-search desk
-take key
-open backpack with key
-open backpack
-use key on backpack
-inspect backpack
-eat cracker
+unlock padlock
 look around
-help
+search desk
+take said key
+take the key
+unlock backpack
+look in backpack
+do not use key on backpack
+take backpack
+use key on backpack
+do run backpack
+do inspect backpack
+take cracker from backpack
+exit room
 don't go to the cafeteria
 look around
 påick up the coin
@@ -24,4 +33,4 @@ open locker 222
 open the locker222
 take the cracker
 Time: 4m 19s
-Number of commands: 25
+Number of commands: 34
