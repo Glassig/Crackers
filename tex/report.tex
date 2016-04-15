@@ -6,6 +6,9 @@
 \usepackage[swedish,english]{babel}
 \usepackage{modifications}
 
+% package for bibliography
+\usepackage{natbib}
+
 \title{Lorem ipsum dolor sit amet, sed diam nonummy nibh eui
        mod tincidunt ut laoreet dol}
 
@@ -57,6 +60,12 @@
 
 \chapter{Conclusion}
 \input{texts/6.conclusion}
+
+
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{apalike}
+\bibliography{references} % expects file "references.bib"
 
 \appendix
 \addappheadtotoc
