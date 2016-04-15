@@ -1,0 +1,21 @@
+search classroom
+i would like to go towards the desk
+go to desk
+go desk
+look in backpack
+unlock padlock
+look around
+search desk
+take said key
+take the key
+unlock backpack
+look in backpack
+do not use key on backpack
+take backpack
+use key on backpack
+do run backpack
+do inspect backpack
+take cracker from backpack
+exit room
+Time: 3m 56s
+Number of commands: 19

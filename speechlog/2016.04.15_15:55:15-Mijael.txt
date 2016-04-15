@@ -1,0 +1,76 @@
+search room
+grab kitchen
+grab room
+
+quit
+eat cracker
+go to table
+get to box
+go the box
+search the box
+
+jump onto the box
+jump onto the table
+
+search cracker
+get cracker
+look cracker
+search the room
+go that livingroom
+search at cracker
+get at that cat
+
+items
+go to that cracker
+search to room
+
+
+go to that livingroom
+take the toy
+check cat
+quit
+inventory
+use the toy
+grab room
+eat cracker
+go to the bedroom
+search to bedroom
+get at depository
+go to depository
+check kitchen
+yes
+get at trash
+go onto the trash
+
+check kitchen
+unlock trash
+go at the trash
+check cracker
+check kitchen
+go the trash
+examine that trash
+open letter
+unlock kitchen
+read to that letter
+go to depository
+grab the depository
+go at the depository
+examine to depository
+items
+
+open that depository
+
+go the depository
+go to depository
+go at that depository
+
+bite at the depository
+
+consume to the letter
+unlock to depository
+examine depository
+search bedroom
+search at the depository
+consume to cracker
+Time: 12m 30s
+Number of commands: 74

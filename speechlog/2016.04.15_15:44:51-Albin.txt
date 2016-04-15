@@ -1,0 +1,52 @@
+go to room
+watch room
+eat that cracker
+eat the cracker
+check cracker
+grab the cracker
+grab onto table
+go to that table
+take box
+look box
+jump onto box
+jump onto the table
+eat that cracker
+jump box
+
+get that room
+get room
+help
+go to that livingroom
+swallow to room
+check room
+get cracker
+take cracker
+get at the cracker
+watch the cracker
+search that cat
+give toy
+watch this toy
+take this toy
+give toy
+look cat
+use that cracker
+use that cracker
+look to that cracker
+swallow that cracker
+items
+help
+go to that bedroom
+study bedroom
+watch trash
+read letter
+study at room
+watch depository
+help
+go to the letter
+watch this room
+get the depository
+watch depository
+read that cracker
+swallow at cracker
+Time: 4m 29s
+Number of commands: 50

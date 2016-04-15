@@ -1,0 +1,31 @@
+search room
+examine backpack
+examine desk
+jump to desk
+jump onto backpack
+get key
+use key
+search backpack
+eat cracker
+search
+look around
+leave room
+go out
+help
+go to corridor
+search
+search room
+examine poster
+go to cafeteria
+search room
+take coin
+use coin
+examine machine
+eat cracker
+go corridor
+open locker
+examine locker
+examine locker222
+eat cracker
+Time: 5m 10s
+Number of commands: 29

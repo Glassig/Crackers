@@ -1,0 +1,38 @@
+look around
+search desk
+pick up key
+loot key
+search key
+help
+search room
+search key
+help key
+pick up key
+use key
+loot key
+grab key
+search romom
+search room
+search desk
+search backpack
+use key
+search backpack
+grab cracker
+search room
+leave room
+help
+go to cafeteria
+search room
+grab coin
+use coin
+search machine
+eat cracker
+help
+go to corridor
+search room
+search lockers
+look at poster
+search locker222
+eat cracker
+Time: 4m 19s
+Number of commands: 36

@@ -1,0 +1,40 @@
+search classroom
+open backpack
+go backpack
+open the backpack
+go to the desk
+search the desk
+pick up key
+pick up the key
+go the backpack
+open the backpack
+use the key
+open the backpack
+eat the cracker
+go the cafeteria
+search the cafeteria
+pick up the coin
+use the machine
+go to the machine
+approach the machine
+use the coin
+explore the machine
+search the machine
+eat the cracker
+go the corridor
+search the corridor
+search the poster
+search lockers
+search for the key
+open the locker that is not locked
+open locker 001
+open the locker001
+search the locker
+open the locker002
+open locker222
+open the locker222
+eat the damn cracker
+consume the damn cracker
+consume the fucking cracker
+Time: 9m 58s
+Number of commands: 38

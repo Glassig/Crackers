@@ -1,0 +1,49 @@
+no
+
+go room
+look the room
+help
+search room
+take the cracker
+
+go that box
+take cracker
+
+go to table
+take cracker
+items
+
+study livingroom
+go to that livingroom
+go room
+search bedroom
+search bedroom
+search to room
+go room
+use toy
+swallow room
+take the toy
+get kitchen
+take the cat
+use the toy
+eat cracker
+quit
+no
+go to that bedroom
+
+search bedroom
+search the trash
+read letter
+go to depository
+go room
+inventory
+go onto that cracker
+quit
+
+no
+get to depository
+unlock depository
+inspect depository
+eat cracker
+Time: 4m 18s
+Number of commands: 47

@@ -1,0 +1,34 @@
+search room
+look in backpack
+look in desk
+pick up key
+open padlock
+grab key
+open padlock
+look in bag
+look in backpack
+unlock padlock
+put key in padlock
+grab backpack
+put the key in the backpack
+open backpack
+open the backpack
+eat the cracker
+leave the room
+help
+go to cafeteria
+search room
+pick up the coin
+put the coin in the machine
+look in the machine
+eat the cracker
+go to the corridor
+search room
+look at the poster
+look at the locker
+222 melons
+look at the lockers
+look at locker222
+eat the cracker
+Time: 5m 5s
+Number of commands: 32

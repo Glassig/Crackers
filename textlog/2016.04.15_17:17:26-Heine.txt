@@ -1,0 +1,27 @@
+look in backpack
+search desk
+take key
+open backpack with key
+open backpack
+use key on backpack
+inspect backpack
+eat cracker
+look around
+help
+don't go to the cafeteria
+look around
+påick up the coin
+pick up the coin
+inspect machine
+use the coin i picked up earlier on the machine
+pick up cracker
+proceed to the corridor
+go to the corridor
+look around
+look at the poster
+go to locker222
+open locker 222
+open the locker222
+take the cracker
+Time: 4m 19s
+Number of commands: 25
