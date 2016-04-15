@@ -11,38 +11,29 @@ grab kitchen
 get room
 get room
 search table
-
 study at box
-
 jump onto box
 jump onto table
 search kitchen
 get cracker
-
 help
 go to livingroom
 look onto toy
 go livingroom
 search livingroom
 examine at toy
-
-
 examine cat
 examine cracker
 study cat
-
 get at that cat
-
 take at toy
 study onto cat
 no
 no
-
 items
 use toy
 get that cracker
 no
-
 get kitchen
 go room
 go to bedroom
@@ -53,9 +44,7 @@ search trash
 read bedroom
 take bedroom
 check room
-
 get bedroom
-
 take to letter
 read letter
 examine depository
@@ -67,11 +56,10 @@ check kitchen
 check kitchen
 check kitchen
 check kitchen
-
 check cracker
 check cracker
 check kitchen
 check kitchen
 take cracker
 Time: 7m 5s
-Number of commands: 75
+Number of commands: 63

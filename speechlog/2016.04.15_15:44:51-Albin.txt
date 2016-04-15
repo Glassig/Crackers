@@ -12,7 +12,6 @@ jump onto box
 jump onto the table
 eat that cracker
 jump box
-
 get that room
 get room
 help
@@ -49,4 +48,4 @@ watch depository
 read that cracker
 swallow at cracker
 Time: 4m 29s
-Number of commands: 50
+Number of commands: 49

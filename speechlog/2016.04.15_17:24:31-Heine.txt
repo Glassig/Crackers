@@ -1,18 +1,14 @@
 no
-
 go room
 look the room
 help
 search room
 take the cracker
-
 go that box
 take cracker
-
 go to table
 take cracker
 items
-
 study livingroom
 go to that livingroom
 go room
@@ -30,7 +26,6 @@ eat cracker
 quit
 no
 go to that bedroom
-
 search bedroom
 search the trash
 read letter
@@ -39,11 +34,10 @@ go room
 inventory
 go onto that cracker
 quit
-
 no
 get to depository
 unlock depository
 inspect depository
 eat cracker
 Time: 4m 18s
-Number of commands: 47
+Number of commands: 41

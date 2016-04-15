@@ -1,8 +1,6 @@
-
 search kitchen
 jump onto box
 jump onto table
-take kitchen
 grab cracker
 go livingroom
 search room
@@ -12,10 +10,9 @@ grab cracker
 go bedroom
 search bedroom
 search trash
-read that bedroom
 read letter
 search depository
 search depository
 grab cracker
 Time: 1m 15s
-Number of commands: 19
+Number of commands: 16
