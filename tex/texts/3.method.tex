@@ -2,10 +2,10 @@
 The game is inspired by the previously mentioned Zork. It consists of a few rooms and tasks to be performed before reaching a victory scenario. The game differs in environments and plot between the different implementations of NLIs, which requires the user to input different commands in order to win. One version uses typing to control your character’s actions and the other uses speech. The reason we decided to create two implementations is so that a user who has played one control-scheme could still play the other without having the benefit of knowing what is required to win.
 
 \subsection{Plot}
-You play as a bunny that has escaped its cage and is on the hunt for food. You need to eat three crackers in each game in order to ease your hunger and win the game. In the speech version you are a house-pet and are in an apartment and has the ability to be in the kitchen, the livingroom and the bedroom. In the text version you are a class-pet in a school and can visit the classroom, the hallway and the cafeteria.
+The user play as a bunny that has escaped its cage and is on the hunt for food. They need to eat three crackers in each game in order to ease their hunger and win the game. In the speech version the user is a house-pet and is in an apartment and has the ability to be in the kitchen, the livingroom and the bedroom. In the text version they are a class-pet in a school and can visit the classroom, the hallway and the cafeteria.
 
 \section{Evaluation}
-“[...] the usability of any tool or system has to be viewed in terms of the context in which it is used, and its appropriateness to that context” (John Brooks, 1996). In 1986 John Brooks created a way to test a user interface and its usability. The idea is that a user tries out a system after which they answer a specific questionnaire, developed by Brooks, concerning the usability of the system. The user should not think for a long period of time or discuss their opinion with anyone before or while filling out the questionnaire. It is important that the user’s initial thought and own experience is recorded.
+The ISO-standard for Usability define it as the extent to which a system or product can be used by users in order to achieve specified goals. The focus is on effectiveness, efficiency and satsifaction in a specific context of use \citep{ISO}. In 1986 John Brooks created a way to test a user interface and its usability where he based it on the first edition of the ISO-definition. The idea is that a user tries out a system after which they answer a specific questionnaire concerning the usability of the system. The user should not think for a long period of time or discuss their opinion with anyone before or while filling out the questionnaire. It is important that the user’s initial thought and own experience is recorded. \citep{Broo}
 
 The questionnaire consists of 10 statements and the user must rank each statement by a scale of 1-5, where 1 is “strongly disagree” and 5 is “strongly agree”. Some examples of the statements are “I thought the system was easy to use” and “I thought there was too much inconsistency in this system”. All the odd questions are ``positive'' while all the even questions are ``negative'' in nature. In order to make them work together, we convert the points as follows: 
 \[
@@ -17,7 +17,7 @@ The questionnaire consists of 10 statements and the user must rank each statemen
 \]
 Where \(Q_{i} \) is the answer to question numbered i. The total point is then: 
 \[ 2.5 * \displaystyle \sum_{i=1}^{10} f_{i} \]
-The score lies in the range 0-100. A high score means that the system is easy to use and liked by the users, while a low score means that it should be improved before publishing.
+The score lies in the range 0-100. A high score means that the system is easy to use and liked by the users, while a low score means that it should be improved before publishing. \citep{Broo}
 
 \subsection{Testing}
 Users tested both versions of the game in order to compare them. First we explain to them the basics of a text-adventure: there is a description of the room you are in, you type or say simple commands in natural language in order to do things and sometimes must interact with your surroundings in order to progress. 
