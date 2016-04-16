@@ -8,3 +8,4 @@ rm report.aux
 rm report.log
 rm report.bbl
 rm report.blg
+echo ""
