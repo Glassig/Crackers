@@ -35,7 +35,7 @@ A
 
 5 Discussion 13
 Resultatets diskussion
-
+Delat som results.
 5.1 KnownProblems ......................... 13  - Båda
 5.2 FutureResearch.......................... 13
 
