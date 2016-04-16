@@ -23,7 +23,7 @@
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
+report.pdf
 
 #Mac Latex
 ###############
