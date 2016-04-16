@@ -7,7 +7,17 @@ You play as a bunny that has escaped its cage and is on the hunt for food. You n
 \section{Evaluation}
 “[...] the usability of any tool or system has to be viewed in terms of the context in which it is used, and its appropriateness to that context” (John Brooks, 1996). In 1986 John Brooks created a way to test a user interface and its usability. The idea is that a user tries out a system after which they answer a specific questionnaire, developed by Brooks, concerning the usability of the system. The user should not think for a long period of time or discuss their opinion with anyone before or while filling out the questionnaire. It is important that the user’s initial thought and own experience is recorded.
 
-The questionnaire consists of 10 statements and the user must rank each statement by a scale of 1-5, where 1 is “strongly disagree” and 5 is “strongly agree”. Some examples of the statements are “I thought the system was easy to use” and “I thought there was too much inconsistency in this system”. To calculate your products score, you take all the odd numbered questions’ points minus 1 and all the even numbered questions’ points are converted by taking 5 minus the point. So if the user answered 2 on question 1 and 2, the final points for the questions are 1 on question 1 and 3 on question 2. Then you sum up the scores and takes the result times 2.5 in order to get a point on the scale between 0-100. A high score means that the system is easy to use and liked by the users, while a low score means that it should be improved before publishing.
+The questionnaire consists of 10 statements and the user must rank each statement by a scale of 1-5, where 1 is “strongly disagree” and 5 is “strongly agree”. Some examples of the statements are “I thought the system was easy to use” and “I thought there was too much inconsistency in this system”. All the odd questions are ``positive'' while all the even questions are ``negative'' in nature. In order to make them work together, we convert the points as follows: 
+\[
+    f_{i} = 
+\begin{cases}
+    5 - Q_{i}, & \text{when i is even}\\
+    Q_{i} - 1, & \text{when i is odd}
+\end{cases}
+\]
+Where \(Q_{i} \) is the answer to question numbered i. The total point is then: 
+\[ 2.5 * \displaystyle \sum_{i=1}^{10} f_{i} \]
+The score lies in the range 0-100. A high score means that the system is easy to use and liked by the users, while a low score means that it should be improved before publishing.
 
 \subsection{Testing}
 Users tested both versions of the game in order to compare them. First we explain to them the basics of a text-adventure: there is a description of the room you are in, you type or say simple commands in natural language in order to do things and sometimes must interact with your surroundings in order to progress. 
