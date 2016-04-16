@@ -6,4 +6,5 @@ pdflatex report.tex
 rm report.toc
 rm report.aux
 rm report.log
-rm report.out
+rm report.bbl
+rm report.blg
