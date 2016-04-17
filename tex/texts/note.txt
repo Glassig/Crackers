@@ -36,10 +36,10 @@ Kashmir
 [] 5 Discussion 13
 	Resultatets diskussion
 	Delat som results.
-		[] K
+		[X] K
 		[] A
 	5.1 KnownProblems .............. 13  - Båda
-		[] K
+		[X] K
 		[] A
 	5.2 FutureResearch .............. 13
 
