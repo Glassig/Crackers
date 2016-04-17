@@ -24,7 +24,7 @@ Kashmir
 	3.3.2 SystemUsabilityScale .............. 6
 
 4 Results 9
-[ ] K
+[X] K
 	4.1 Effectiveness .............. 9 
 		4.1.1 Timescale .............. 9 
 		4.1.2 Commands .............. 9
@@ -42,7 +42,7 @@ Kashmir
 		[] K
 		[] A
 	5.2 FutureResearch .............. 13
-	
+
 
 MÅNDAG
 [ ] Introduction
