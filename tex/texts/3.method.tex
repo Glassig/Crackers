@@ -40,15 +40,17 @@ Before the user plays any game, they fill in a form asking for their personal da
 
 While the user plays the game records each command and how many commands is used. When the user is done this data gets saved to a file that is later done for analyzis.
 
-\subsection{System Usability Scale}
+\subsection{System Usability Scale} \label{sec:sus}
 Using the System Usability Scale as described in \ref{usability}, a score for each system is calculated. However, since all the odd questions are ``positive statements'' (for example ``I think that I would like to use this sytem frequently'') while all the even questions are ``negative statemens'' (such as ``I found the system unnecessarily complex'') in nature, they have to be converted in order to make them work together. This is done as follows: 
-\[
-    f_{i} = 
-\begin{cases}
-    5 - Q_{i}, & \text{when i is even}\\
-    Q_{i} - 1, & \text{when i is odd}
-\end{cases}
-\]
+\begin{equation} \label{eq:convert}
+	    f_{i} = 
+	\begin{cases} 
+	    5 - Q_{i}, & \text{when i is even}\\
+	    Q_{i} - 1, & \text{when i is odd}
+	\end{cases}
+\end{equation}
 Where \(Q_{i} \) is the answer to question numbered i. The total point is then: 
-\[ 2.5 * \displaystyle \sum_{i=1}^{10} f_{i} \]
+\begin{equation} \label{eq:sum}
+	2.5 * \displaystyle \sum_{i=1}^{10} f_{i} 
+\end{equation}
 The score lies in the range 0-100. A high score means that the system is easy to use and liked by the users, while a low score means that it should be improved before publishing. \citep{Broo}
