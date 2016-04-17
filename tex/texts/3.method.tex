@@ -34,16 +34,14 @@ When implementing Sphinx4 into the game it turned out that the more recognizable
 Metatext?
 
 \subsection{User Testing}
-Users tested both versions of the game in order to compare them. First we explain to them the basics of a text-adventure: there is a description of the room you are in, you type or say simple commands in natural language in order to do things and sometimes must interact with your surroundings in order to progress. 
+Users tested both versions of the game so that each of the score given could be compared. Each game starts with an introductory text, explaining how to play the game, the basic structure of commands and that the user should try using synonyms if stuck at any point. It also explains the goal and the name of all the rooms. This is the only thing the user is told before they start inputting commands. While they play they might only be given hints if the user is stuck at some point for quite a while. Examples of these hints are ``speak clearer'', ``try synonyms'' or ``input should be at least a verb and a noun''.
 
-The user gets to play one of the game-versions and upon completion they will answer a short form that will be expanded upon in the following section: “System Usability Scale”(SECTION x.y). Various data was recorded, such as amount of commands, completion time and if there were anything specific that the user failed on multiple times. The last check is in case we require the users to say a certain word or phrase at one part but the game has a hard time parsing the command for each user. This is done in an attempt to filter out bad programming and game design on our part.
+Before the user plays any game, they fill in a form asking for their personal data, how well they would rate their spoken and written english and if they have any speech impediment. The user then plays one version of the game and after fills in the ``System Usability Scale''-questionnaire detailed in \ref{usability}. They then plays the other version and once again fills in the questionnaire. The game the user starts to play is varied between the users, so that almost half of the testers started with speech and half with text.
 
-After the user played one version and filled in the questionnaire the user then played the other version and filled in the questionnaire again but with regard to the new control scheme. We repeated this test with multiple users and we alternated between which game version was to be played first.
+While the user plays the game records each command and how many commands is used. When the user is done this data gets saved to a file that is later done for analyzis.
 
 \subsection{System Usability Scale}
-ADD INTRO TEXT
-
-All the odd questions are ``positive'' while all the even questions are ``negative'' in nature. In order to make them work together, we convert the points as follows: 
+Using the System Usability Scale as described in \ref{usability}, a score for each system is calculated. However, since all the odd questions are ``positive statements'' (for example ``I think that I would like to use this sytem frequently'') while all the even questions are ``negative statemens'' (such as ``I found the system unnecessarily complex'') in nature, they have to be converted in order to make them work together. This is done as follows: 
 \[
     f_{i} = 
 \begin{cases}
