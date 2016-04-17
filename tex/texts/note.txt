@@ -10,9 +10,10 @@ Text-BasedAdventureGames .................. 4
 2.5 PreviousResearch......................... 4
 A	Memoria
 A	Put-that-there
-K	förra årets kex
+[ ] K	förra årets kex
 
-K
+
+[X] K
 Implementation.......................... 5  
 3.2.1 ProgrammingLanguage ................. 6 
 3.2.2 StanfordPOSTagger ................... 6 
@@ -24,7 +25,7 @@ Evaluation............................. 6
 3.3.2 SystemUsabilityScale .................. 6
 
 4 Results 9
-K
+[ ] K
 4.1 Effectiveness............................ 9 
 	4.1.1 Timescale ......................... 9 
 	4.1.2 Commands ........................ 9
