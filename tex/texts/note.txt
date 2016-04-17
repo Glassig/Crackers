@@ -10,7 +10,7 @@ Kashmir
 [] 2.5 PreviousResearch .............. 4
 	[] A	Memoria
 	[] A	Put-that-there
-	[ ] K	förra årets kex
+	[X] K	förra årets kex
 
 [X] K
 	Implementation .............. 5  
