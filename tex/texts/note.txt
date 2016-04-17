@@ -13,11 +13,6 @@ Implementation.......................... 5
 3.2.2 StanfordPOSTagger ................... 6 
 3.2.3 Sphinx4 .......................... 6
 
-A
-Evaluation............................. 6 
-3.3.1 UserTesting........................ 6 
-3.3.2 SystemUsabilityScale .................. 6
-
 4 Results 9
 K
 4.1 Effectiveness............................ 9 
