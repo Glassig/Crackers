@@ -2,11 +2,6 @@ Angelina: lägga in bilder och strukturerar dom.
 
 Kashmir
 
-A
-Text-BasedAdventureGames .................. 4 
-	2.3.1 Zork............................ 4
-2.4 Usability.............................. 4
-
 2.5 PreviousResearch......................... 4
 A	Memoria
 A	Put-that-there
