@@ -28,7 +28,7 @@ Kashmir
 	4.1 Effectiveness .............. 9 
 		4.1.1 Timescale .............. 9 
 		4.1.2 Commands .............. 9
-[] A
+[ehhhh] A
 	4.2 EaseofUse .............. 9 
 		4.2.1 EnglishConfidence .............. 11 
 		4.3 Satisfaction(SUS) .............. 11
