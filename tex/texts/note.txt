@@ -35,5 +35,9 @@ Delat som results.
 5.1 KnownProblems ......................... 13  - Båda
 5.2 FutureResearch.......................... 13
 
-6 Conclusion 15 - Måndag
-References................................ 16
+
+MÅNDAG
+[ ] Introduction
+[ ] Conclusion
+[ ] Metatexter
+[ ] Övrigt (kolla igenom alla delar)
