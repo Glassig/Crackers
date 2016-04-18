@@ -15,7 +15,7 @@ Table \ref{avg_time} declares the average time in seconds it took for the users 
     445.22 &   & 310.22\\
     \bottomrule
   \end{tabular}
-  \caption{Average Time}\label{avg_time}
+  \caption{Average Time to complete each version}\label{avg_time}
 \end{table}
 
 \subsection{Commands} %Add standardavvikelse
@@ -30,13 +30,13 @@ Table \ref{avg_cmd} declares the average amount of commands used before completi
     64.33 &   & 31.22\\
     \bottomrule
   \end{tabular}
-  \caption{Average Number of Commands}\label{avg_cmd} % OMG LOOK HERE!!!
+  \caption{Average Number of Commands in each version}\label{avg_cmd} % OMG LOOK HERE!!!
 \end{table}
 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{images/ideal_cmd.jpg}
-  \caption{Bladiblala}\label{ideal_cmd}
+  \caption{Average amount of commands per game version compared to the ideal number}\label{ideal_cmd}
 \end{figure}
 
 Figure \ref{time_cmd} shows the number of commands used over time. As you would expect, the speech version follows the logic of ``the longer time played the more commands used''. However, this is not the case for the text version, where the time played seems irrelevant to the amount of commands used.
@@ -44,7 +44,7 @@ Figure \ref{time_cmd} shows the number of commands used over time. As you would 
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{images/time_cmd.jpg} %width=0.8\textwidth scales the image down to 80 percent of the text-width. Keeps the ratio.
-  \caption{Bladiblala}\label{time_cmd}
+  \caption{Number of commands and amount of time played for each user}\label{time_cmd}
 \end{figure}
 
 \section{Ease of Use}
@@ -53,32 +53,32 @@ When the user played the game, the amount of commands used was recorded. A comma
 
 \subsection{English Confidence} \label{sec:eng_con}
 Each user had to rate their spoken and written english between 1-5, where 1 is not good and 5 is fluent. These users were divided into groups and the average amount of commands, time and score were calculated for each group. The result for the amount of commands can be seen in figure \ref{eng_cmd}. 
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/english_cmd.jpg}
-  \caption{Bladiblala}\label{eng_cmd}
+  \caption{Average amount of commands used per english level-group}\label{eng_cmd}
 \end{figure}
 The time is put in seconds and is shown in figure \ref{eng_time}.
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/english_time.jpg}
-  \caption{Bladiblala}\label{eng_time}
+  \caption{Average time used per english level-group}\label{eng_time}
 \end{figure}
 The score from the System Usability Scale in relation to the english level is displayed in figure \ref{eng_score}.
-\begin{figure}[p]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/english_score.jpg}
-  \caption{Bladiblala}\label{eng_score}
+  \caption{The Average score from the usability test per english level-group}\label{eng_score}
 \end{figure}
 
 %\subsection{User Former Experience}
 
 \section{Satisfaction (SUS)}
-Figure \ref{sus_table} shows the average answer on each question after they have been converted according to formulae \ref{eq:convert} in section \ref{sec:sus}. 
-\begin{figure}[p]
+Figure \ref{fig:sus_table} shows the average answer on each question after they have been converted according to formulae \ref{eq:convert} in section \ref{sec:sus}. 
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/sus.jpg}
-  \caption{Bladiblala}\label{sus_table}
+  \caption{The average corrected score on each statement for each version}\label{fig:sus_table}
 \end{figure}
 
 The total average score as calculated in formulae \ref{eq:sum} for each version can be seen in table \ref{tot_score}.
@@ -91,7 +91,5 @@ The total average score as calculated in formulae \ref{eq:sum} for each version 
     54.17 &   & 78.06\\
     \bottomrule
   \end{tabular}
-  \caption{Caption for the table.}\label{tot_score}
+  \caption{Total average score for each version}\label{tot_score}
 \end{table}
-
-satisfaction
