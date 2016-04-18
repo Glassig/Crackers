@@ -3,6 +3,6 @@ MÅNDAG
 [ ] Conclusion
 [ ] References
 [ ] Metatexter
-[ ] Flytta figurer rätt
 [ ] Figurtext
+[ ] Flytta figurer rätt
 [ ] Övrigt (kolla igenom alla delar)
