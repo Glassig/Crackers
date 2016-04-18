@@ -1,13 +1,6 @@
 MÅNDAG
-[] Introduction
-	-intro
-	-problem statement
-	-scope
-	-purpose
-	-terminology
+[] Terminology: definition of gamification
 [] Conclusion
 [] References
 [] Metatexter
-[X] Figurtexter
 [] Flytta figurer rätt
-[] Övrigt (kolla igenom alla delar)
