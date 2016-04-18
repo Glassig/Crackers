@@ -46,6 +46,7 @@
 \end{foreignabstract}
 \newpage
 
+\selectlanguage{english}
 \tableofcontents*
 \mainmatter
 \pagestyle{newchap}
@@ -69,28 +70,31 @@
 \input{texts/6.conclusion}
 
 \newpage
-\addcontentsline{toc}{section}{References}
+%\addcontentsline{toc}{section}{References}
 \bibliographystyle{apalike}
 \bibliography{references} % expects file "references.bib"
 
+\selectlanguage{english}
 \appendix
-\addappheadtotoc
-\chapter{RDF}\label{appA}
-
+%\addcontentsline{toc}{chapter}{Appendix}
+%\chapter{Appendix}
+\chapter{Questionnaires}\label{appA}
 \begin{figure}[ht]
-\begin{center}
-And here is a figure
-\caption{\small{Several statements describing the same resource.}}\label{RDF_4}
-\end{center}
+	\centering
+	\includegraphics[keepaspectratio, scale = 0.8]{images/sus_quest.jpg}
+	\caption{\small{Questions used in the System Usability Scale}}\label{Quest}
 \end{figure}
 
-that we refer to here: \ref{RDF_4}
-
-\chapter{SUS}\label{appB}
-\begin{figure}[p]
+\begin{figure}[ht]
 	\centering
-	\includegraphics[keepaspectratio, scale = 0.8]{images/suschapt.pdf}
-	\caption{\small{Questions used in the System Usability Scale}}\label{Quest}
+	\includegraphics[keepaspectratio, scale = 0.8]{images/user_data_1.png}
+	\caption{\small{Part 1 of the questionnaire used to gather user data}}\label{fig:ud_1}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[keepaspectratio, scale = 0.8]{images/user_data_2.png}
+	\caption{\small{Part 2 of the questionnaire used to gather user data}}\label{fig:ud_2}
 \end{figure}
 
 \end{document}
