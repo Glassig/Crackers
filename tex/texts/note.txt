@@ -1,52 +1,8 @@
-Angelina: lägga in bilder och strukturerar dom.
-
-Kashmir
-
-[X] A
-	Text-BasedAdventureGames .............. 4 
-		2.3.1 Zork .............. 4
-	2.4 Usability .............. 4
-	
-[] 2.5 PreviousResearch .............. 4
-	[] A	Memoria
-	[] A	Put-that-there
-	[X] K	förra årets kex
-
-[X] K
-	Implementation .............. 5  
-	3.2.1 ProgrammingLanguage .............. 6 
-	3.2.2 StanfordPOSTagger .............. 6 
-	3.2.3 Sphinx4 .............. 6
-
-[X] A
-	Evaluation .............. 6 
-	3.3.1 UserTesting .............. 6 
-	3.3.2 SystemUsabilityScale .............. 6
-
-4 Results 9
-[X] K
-	4.1 Effectiveness .............. 9 
-		4.1.1 Timescale .............. 9 
-		4.1.2 Commands .............. 9
-[ehhhh] A
-	4.2 EaseofUse .............. 9 
-		4.2.1 EnglishConfidence .............. 11 
-		4.3 Satisfaction(SUS) .............. 11
-
-[] 5 Discussion 13
-	Resultatets diskussion
-	Delat som results.
-		[X] K
-		[] A
-	5.1 KnownProblems .............. 13  - Båda
-		[X] K
-		[] A
-	5.2 FutureResearch .............. 13
-
-
 MÅNDAG
 [ ] Introduction
 [ ] Conclusion
 [ ] References
 [ ] Metatexter
+[ ] Flytta figurer rätt
+[ ] Figurtext
 [ ] Övrigt (kolla igenom alla delar)
