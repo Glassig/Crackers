@@ -1,8 +1,13 @@
 MÅNDAG
 [] Introduction
+	-intro
+	-problem statement
+	-scope
+	-purpose
+	-terminology
 [] Conclusion
 [] References
 [] Metatexter
-[] Figurtext
+[X] Figurtexter
 [] Flytta figurer rätt
 [] Övrigt (kolla igenom alla delar)
