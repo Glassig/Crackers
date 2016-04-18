@@ -1,8 +1,8 @@
 MÅNDAG
-[ ] Introduction
-[ ] Conclusion
-[ ] References
-[ ] Metatexter
-[ ] Figurtext
-[ ] Flytta figurer rätt
-[ ] Övrigt (kolla igenom alla delar)
+[] Introduction
+[] Conclusion
+[] References
+[] Metatexter
+[] Figurtext
+[] Flytta figurer rätt
+[] Övrigt (kolla igenom alla delar)
