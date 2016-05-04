@@ -1,0 +1,3 @@
+MÅNDAG
+links in sources might get cut of at newline (iso)
+should we explain difference between ours and last years kex?
