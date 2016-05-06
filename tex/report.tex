@@ -8,7 +8,7 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{url}
+\usepackage{hyperref}
 \usepackage{float}
 % package for bibliography
 \usepackage{natbib}
@@ -67,15 +67,15 @@
 \input{texts/6.conclusion}
 
 \newpage
-\addcontentsline{toc}{chapter}{References} %Adds References to Contents, must fix!
+%\addcontentsline{toc}{chapter}{References} %Adds References to Contents, must fix!
 \bibliographystyle{apalike}
 \bibliography{references} % expects file "references.bib"
 
 \selectlanguage{english}
 \appendix
 %\addcontentsline{toc}{chapter}{Appendix}
-\chapter{Appendix}
-\section{Questionnaires}\label{appA}
+\chapter{Appendix}\label{appA}
+%\section{Questionnaires}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[keepaspectratio, scale = 0.8]{images/sus_quest.jpg}
